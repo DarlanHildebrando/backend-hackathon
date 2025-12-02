@@ -4,7 +4,6 @@ import prisma from "../../prisma/client";
 
 export class UserService {
 
-
     async getUsers(): Promise<IUser[]> {
 
         return prisma.users.findMany();
