@@ -65,12 +65,23 @@ Aqui estão as rotas que o sistema possui:
 
 | Método | Endpoint | Descrição | Requer |
 |-----|-----|----|----|
-| ```POST```| ```/auth/login```| Gera um token JWT com os dados do usuário para realizar login no sistema | Não |
-| ```GET``` | ```/users``` | Retorna os dados de todos os usuários da tabela "Users" | Sim |
-| ```GET``` | ```/users/:id``` | Retorna os dados de um usuário especificado através de seu ID | Sim |
-| ```POST``` | ```/users``` | Cria um novo usuário no sistema e as informações são adicionadas no BDD | Sim |
-| ```PUT``` | ```/users/:id``` | Atualiza as informações de um usuário já registrado no BDD | Sim |
-| ```DELETE``` | ```/users/:id``` | Deleta todas as informações de um usuário especifico do BDD | Sim |
+| **POST**| ```/auth/login```| Gera um token JWT com os dados do usuário para realizar login no sistema | Não |
+| **GET** | ```/users``` | Retorna os dados de todos os usuários da tabela "Users" | Sim |
+| **GET** | ```/users/:id``` | Retorna os dados de um usuário especificado através de seu ID | Sim |
+| **POST** | ```/users``` | Cria um novo usuário no sistema e as informações são adicionadas no BDD | Não |
+| **PUT** | ```/users/:id``` | Atualiza as informações de um usuário já registrado no BDD | Sim |
+| **DELETE** | ```/users/:id``` | Deleta todas as informações de um usuário especifico do BDD | Sim |
+| **GET** | ```/address``` | Retorna os dados de todos os usuários da tabela "Address" | Sim |
+| **GET** | ```/address/:id``` | Retorna os dados de um endereço específico através do ID | Sim |
+| **POST** | ```/address``` | Cria um novo endereço no sistema e as informações são adicionadas no BDD | Sim |
+| **PUT** | ```/address/:id``` | Atualiza os dados de um endereço selecionado pelo ID | Sim |
+| **DELETE** | ```/adress/:id``` | Deleta todos os dados de um endereço selecionado pelo ID | Sim |
+| **GET** | ```/roads``` | Busca todas as jornadas no BDD | Sim |
+| **GET** | ```/roads/:id``` | Retorna uma jornada selecionado pelo ID | Sim |
+| **POST** | ```/roads``` | Adiciona uma jornada no BDD | Sim |
+| **PUT** | ```/roads/:id``` | Atualiza uma jornada já cadastrada através do ID |
+| **DELETE** | ```/roads/:id``` | Deleta a jornada atavés do ID | Sim |
+
 
 ## 📁 Estrutura do Projeto
 A estrutura do sistema ela está organizada de forma modular, com foco de separação de responsabilidades (controllers, services, routes, zod, modules) dentro dentro de cada domínio dentro da pasta (`modules`).
