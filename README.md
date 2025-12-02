@@ -65,6 +65,7 @@ Aqui estão as rotas que o sistema possui:
 
 | Método | Endpoint | Descrição | Requer |
 |-----|-----|----|----|
+| ```POST```| ```/auth/login```| Gera um token JWT com os dados do usuário para realizar login no sistema | Não |
 | ```GET``` | ```/users``` | Retorna os dados de todos os usuários da tabela "Users" | Sim |
 | ```GET``` | ```/users/:id``` | Retorna os dados de um usuário especificado através de seu ID | Sim |
 | ```POST``` | ```/users``` | Cria um novo usuário no sistema e as informações são adicionadas no BDD | Sim |
