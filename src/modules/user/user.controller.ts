@@ -54,10 +54,16 @@ export class UserController {
             const user: ICreateUser = req.body;
             const validatedUser = userSchema.parse(user);
             const hashPassword = await bcrypt.hash(user.password, 10);
+            const existingUser = await this.userService.getUserByEmail(user.email);
 
             if (!validatedUser) {
 
                 return res.status(404).json({ message: "Object structure not valid to sign" });
+            };
+
+            if (existingUser) {
+
+                return res.status(409).json({ message: "Email already signed" });
             };
 
             const newUser: ICreateUser = { ...user, password: hashPassword };
@@ -77,6 +83,16 @@ export class UserController {
             const { id } = req.params;
             const user: IUpdateUser = req.body;
             const validatedUser = updateUserSchema.parse(user);
+
+            if (user.email) {
+
+                const existingUser = await this.userService.getUserByEmail(user.email);
+                
+                if (existingUser) {
+
+                    return res.status(409).json({ message: "Email already signed" });
+                };
+            };
 
             if (!id) {
 

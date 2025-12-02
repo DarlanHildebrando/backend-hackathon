@@ -1,5 +1,6 @@
-import { ICreateUser, IUpdateUser, IUser } from "./user.module";
+import type { ICreateUser, IUpdateUser, IUser } from "./user.module";
 import prisma from "../../prisma/client";
+
 
 export class UserService {
 
@@ -14,9 +15,14 @@ export class UserService {
         return prisma.users.findUnique({ where: { id } });
     };
 
+    async getUserByEmail(email: string): Promise<IUser | null> {
+
+        return prisma.users.findFirst({ where: { email } });
+    };
+
     async createUser(data: ICreateUser): Promise<IUser> {
 
-        return prisma.users.create({data});
+        return prisma.users.create({ data });
     };
 
     async updateUser(id: number, data: IUpdateUser): Promise<IUser> {
