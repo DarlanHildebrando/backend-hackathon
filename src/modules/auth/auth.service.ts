@@ -1,8 +1,7 @@
 import jwt from "jsonwebtoken";
-import type { IUser } from "../user/user.module.js";
+import type { ILoggedUser, IUser } from "../user/user.module.js";
 import { UserService } from "../user/user.service.js";
-import type { IAuth } from "./auth.modules.js"
-import type { ILoggedUser } from "../user/user.module.js";
+import type { IAuth } from "./auth.modules.js";
 import bcrypt from "bcrypt";
 
 export class AuthService {
@@ -14,7 +13,7 @@ export class AuthService {
         this.userService = userService;
     };
     
-    async authenticate(email: string, password: string): Promise<ILoggedUser | null>{
+    async authenticate(email: string): Promise<ILoggedUser | null>{
         
         const JWT_SECRET: string = process.env.JWT_SECRET || "";
         const user: ILoggedUser | null = await this.userService.getUserByEmail(email);
@@ -38,8 +37,6 @@ export class AuthService {
         // };
 
         // const token = jwt.sign(payload, JWT_SECRET, {expiresIn: '1h'});
-
-
         return user;
     }; 
 };
