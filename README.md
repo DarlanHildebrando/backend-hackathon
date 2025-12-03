@@ -43,7 +43,7 @@ Crie um arquivo ```.env``` na raiz do projeto, baseado no arquivo ```.env.exampl
 Utilize o Docker Compose para subir o container do PostgreSQL:
 
 ```bash
-docker-compose up
+docker-compose up --build
 ```
 ### 2. Execute as migrações do Prisma
 Aplique o schema do BDD definido no ```prisma/schema.prisma```:
@@ -84,7 +84,7 @@ Aqui estão as rotas que o sistema possui:
 
 
 ## 📁 Estrutura do Projeto
-A estrutura do sistema ela está organizada de forma modular, com foco de separação de responsabilidades (controllers, services, routes, zod, modules) dentro dentro de cada domínio dentro da pasta (`modules`).
+A estrutura do sistema está organizada de forma modular, com foco de separação nas responsabilidades (controllers, services, routes, zod, modules) dentro dentro de cada domínio dentro da pasta (`modules`).
 
 ```plaintext
 .
