@@ -4,6 +4,7 @@ export interface IAddress {
 
     id: number;
     name: string;
+    image_url: string;
     category: category;
 };
 
@@ -17,5 +18,6 @@ export interface ICreateAddress {
 export interface IUpdateAddress {
 
     name?: string;
+    image_url?: string;
     category: category;
 };
