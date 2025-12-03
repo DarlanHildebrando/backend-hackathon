@@ -41,9 +41,10 @@ model Road {
 }
 
 model Address {
-  id       Int      @id @default(autoincrement())
-  name     String
-  category Category
+  id        Int      @id @default(autoincrement())
+  name      String
+  image_url String
+  category  Category
 
   relations Relation[]
 }
