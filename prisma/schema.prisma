@@ -11,6 +11,7 @@ generator client {
 
 datasource db {
   provider = "postgresql"
+  url      = env("DATABASE_URL")
 }
 
 enum Category {
@@ -42,6 +43,7 @@ model Road {
 model Address {
   id       Int      @id @default(autoincrement())
   name     String
+  image_url String
   category Category
 
   relations Relation[]

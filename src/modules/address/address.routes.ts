@@ -1,7 +1,7 @@
-import { AddressController } from "./address.controller";
-import { AddressService } from "./address.service";
+import { AddressController } from "./address.controller.js";
+import { AddressService } from "./address.service.js";
 import { Router } from "express";
-import { authenticateToken } from "../auth/auth.middleware";
+import { authenticateToken } from "../auth/auth.middleware.js";
 
 const addressRouter: Router = Router();
 const addressService: AddressService = new AddressService();

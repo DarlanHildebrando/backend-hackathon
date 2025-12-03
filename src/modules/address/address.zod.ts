@@ -1,11 +1,11 @@
 import z from "zod";
-import { category } from "./address.module";
+import { Category } from "../../generated/prisma/index.js";
 
 export const addressSchema = z.object({
 
     id: z.number().positive(),
     name: z.string(),
-    category: z.enum(category)
+    category: z.enum(Category)
 });
 
 export const updateAddressSchema = addressSchema.partial();

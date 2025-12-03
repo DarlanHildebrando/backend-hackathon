@@ -1,7 +1,7 @@
 import jwt from "jsonwebtoken";
-import { IUser } from "../user/user.module";
-import { UserService } from "../user/user.serivce";
-import type { IAuth } from "./auth.modules";
+import type { IUser } from "../user/user.module.js";
+import { UserService } from "../user/user.serivce.js";
+import type { IAuth } from "./auth.modules.js";
 import bcrypt from "bcrypt";
 
 export class AuthService {

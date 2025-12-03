@@ -1,9 +1,4 @@
-export enum category {
-
-    TRILHA = "TRILHA",
-    PRAIA = "PRAIA",
-    LARICA = "LARICA"
-};
+export type category = "TRILHA" | "PRAIA" | "LARICA"
 
 export interface IAddress {
 
@@ -15,6 +10,7 @@ export interface IAddress {
 export interface ICreateAddress {
 
     name: string;
+    image_url: string;
     category: category;
 };
 

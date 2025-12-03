@@ -1,5 +1,5 @@
-import prisma from "../../prisma/client";
-import { ICreateAddress, IUpdateAddress, IAddress } from "./address.module";
+import prisma from "../../prisma/client.js";
+import type { ICreateAddress, IUpdateAddress, IAddress } from "./address.module.js";
 
 export class AddressService {
 
@@ -25,6 +25,6 @@ export class AddressService {
 
     async deleteAddress(id: number): Promise<void> {
 
-        return prisma.address.delete({ where: id });
+        prisma.address.delete({ where: { id } });
     };
 };

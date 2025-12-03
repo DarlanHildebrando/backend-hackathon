@@ -125,7 +125,30 @@ exports.Prisma.UsersScalarFieldEnum = {
   id: 'id',
   name: 'name',
   email: 'email',
-  password: 'password'
+  password: 'password',
+  current_coins: 'current_coins',
+  created_at: 'created_at'
+};
+
+exports.Prisma.RoadScalarFieldEnum = {
+  id: 'id',
+  days: 'days',
+  attempt_coins: 'attempt_coins',
+  created_at: 'created_at'
+};
+
+exports.Prisma.AddressScalarFieldEnum = {
+  id: 'id',
+  name: 'name',
+  image_url: 'image_url',
+  category: 'category'
+};
+
+exports.Prisma.RelationScalarFieldEnum = {
+  id: 'id',
+  userId: 'userId',
+  addressId: 'addressId',
+  roadId: 'roadId'
 };
 
 exports.Prisma.SortOrder = {
@@ -137,10 +160,17 @@ exports.Prisma.QueryMode = {
   default: 'default',
   insensitive: 'insensitive'
 };
-
+exports.Category = exports.$Enums.Category = {
+  TRILHA: 'TRILHA',
+  PRAIA: 'PRAIA',
+  LARICA: 'LARICA'
+};
 
 exports.Prisma.ModelName = {
-  Users: 'Users'
+  Users: 'Users',
+  Road: 'Road',
+  Address: 'Address',
+  Relation: 'Relation'
 };
 
 /**
