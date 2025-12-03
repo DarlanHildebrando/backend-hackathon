@@ -1,5 +1,5 @@
-import type { ICreateUser, IUpdateUser, IUser } from "./user.module";
-import prisma from "../../prisma/client";
+import type { ICreateUser, IUpdateUser, IUser } from "./user.module.js";
+import prisma from "../../prisma/client.js";
 
 
 export class UserService {

@@ -1,10 +1,10 @@
-import { Express } from "express";
+import type { Express } from "express";
 import express from "express";
 import cors from "cors";
-import userRouter from "./modules/user/user.routes";
-import authRouter from "./modules/auth/auth.routes";
-import addressRouter from "./modules/address/address.routes";
-import roadRouter from "./road/road.routes";
+import userRouter from "./modules/user/user.routes.js";
+import authRouter from "./modules/auth/auth.routes.js";
+import addressRouter from "./modules/address/address.routes.js";
+import roadRouter from "./modules/road/road.routes.js";
 
 const app: Express = express();
 

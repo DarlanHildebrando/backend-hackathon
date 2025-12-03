@@ -1,9 +1,4 @@
-export enum category {
-
-    TRILHA = "TRILHA",
-    PRAIA = "PRAIA",
-    LARICA = "LARICA"
-};
+export type category = "TRILHA" | "PRAIA" | "LARICA"
 
 export interface IAddress {
 

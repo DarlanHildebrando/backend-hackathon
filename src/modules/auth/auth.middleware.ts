@@ -1,5 +1,5 @@
-import { Request, Response, NextFunction } from "express";
-import { IAuth } from "./auth.modules";
+import type { Request, Response, NextFunction } from "express";
+import type { IAuth } from "./auth.modules.js";
 import jwt from "jsonwebtoken";
 
 declare global {

@@ -1,7 +1,7 @@
-import { IAddress, ICreateAddress } from "./address.module";
-import { AddressService } from "./address.service";
-import { Request, Response } from "express";
-import { addressSchema, updateAddressSchema } from "./address.zod";
+import type { IAddress, ICreateAddress } from "./address.module.js";
+import { AddressService } from "./address.service.js";
+import type { Request, Response } from "express";
+import { addressSchema, updateAddressSchema } from "./address.zod.js";
 
 export class AddressController {
 

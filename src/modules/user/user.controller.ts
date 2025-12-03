@@ -1,7 +1,7 @@
-import { ICreateUser, IUpdateUser, IUser } from "./user.module";
-import { UserService } from "./user.serivce";
+import type { ICreateUser, IUpdateUser, IUser } from "./user.module.js";
+import { UserService } from "./user.serivce.js";
 import type { Request, Response } from "express";
-import { updateUserSchema, userSchema } from "./user.zod";
+import { updateUserSchema, userSchema } from "./user.zod.js";
 import bcrypt from "bcrypt";
 
 export class UserController {
