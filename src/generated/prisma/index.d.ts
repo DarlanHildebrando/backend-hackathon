@@ -2379,34 +2379,32 @@ export namespace Prisma {
 
   export type RoadAvgAggregateOutputType = {
     id: number | null
-    days: number | null
     attempt_coins: number | null
   }
 
   export type RoadSumAggregateOutputType = {
     id: number | null
-    days: number | null
     attempt_coins: number | null
   }
 
   export type RoadMinAggregateOutputType = {
     id: number | null
-    days: number | null
     attempt_coins: number | null
+    check: boolean | null
     created_at: Date | null
   }
 
   export type RoadMaxAggregateOutputType = {
     id: number | null
-    days: number | null
     attempt_coins: number | null
+    check: boolean | null
     created_at: Date | null
   }
 
   export type RoadCountAggregateOutputType = {
     id: number
-    days: number
     attempt_coins: number
+    check: number
     created_at: number
     _all: number
   }
@@ -2414,34 +2412,32 @@ export namespace Prisma {
 
   export type RoadAvgAggregateInputType = {
     id?: true
-    days?: true
     attempt_coins?: true
   }
 
   export type RoadSumAggregateInputType = {
     id?: true
-    days?: true
     attempt_coins?: true
   }
 
   export type RoadMinAggregateInputType = {
     id?: true
-    days?: true
     attempt_coins?: true
+    check?: true
     created_at?: true
   }
 
   export type RoadMaxAggregateInputType = {
     id?: true
-    days?: true
     attempt_coins?: true
+    check?: true
     created_at?: true
   }
 
   export type RoadCountAggregateInputType = {
     id?: true
-    days?: true
     attempt_coins?: true
+    check?: true
     created_at?: true
     _all?: true
   }
@@ -2534,8 +2530,8 @@ export namespace Prisma {
 
   export type RoadGroupByOutputType = {
     id: number
-    days: number
     attempt_coins: number
+    check: boolean
     created_at: Date
     _count: RoadCountAggregateOutputType | null
     _avg: RoadAvgAggregateOutputType | null
@@ -2560,8 +2556,8 @@ export namespace Prisma {
 
   export type RoadSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
-    days?: boolean
     attempt_coins?: boolean
+    check?: boolean
     created_at?: boolean
     relations?: boolean | Road$relationsArgs<ExtArgs>
     _count?: boolean | RoadCountOutputTypeDefaultArgs<ExtArgs>
@@ -2569,26 +2565,26 @@ export namespace Prisma {
 
   export type RoadSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
-    days?: boolean
     attempt_coins?: boolean
+    check?: boolean
     created_at?: boolean
   }, ExtArgs["result"]["road"]>
 
   export type RoadSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
-    days?: boolean
     attempt_coins?: boolean
+    check?: boolean
     created_at?: boolean
   }, ExtArgs["result"]["road"]>
 
   export type RoadSelectScalar = {
     id?: boolean
-    days?: boolean
     attempt_coins?: boolean
+    check?: boolean
     created_at?: boolean
   }
 
-  export type RoadOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "days" | "attempt_coins" | "created_at", ExtArgs["result"]["road"]>
+  export type RoadOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "attempt_coins" | "check" | "created_at", ExtArgs["result"]["road"]>
   export type RoadInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     relations?: boolean | Road$relationsArgs<ExtArgs>
     _count?: boolean | RoadCountOutputTypeDefaultArgs<ExtArgs>
@@ -2603,8 +2599,8 @@ export namespace Prisma {
     }
     scalars: $Extensions.GetPayloadResult<{
       id: number
-      days: number
       attempt_coins: number
+      check: boolean
       created_at: Date
     }, ExtArgs["result"]["road"]>
     composites: {}
@@ -3031,8 +3027,8 @@ export namespace Prisma {
    */
   interface RoadFieldRefs {
     readonly id: FieldRef<"Road", 'Int'>
-    readonly days: FieldRef<"Road", 'Int'>
     readonly attempt_coins: FieldRef<"Road", 'Int'>
+    readonly check: FieldRef<"Road", 'Boolean'>
     readonly created_at: FieldRef<"Road", 'DateTime'>
   }
     
@@ -3489,6 +3485,7 @@ export namespace Prisma {
     name: string | null
     image_url: string | null
     category: $Enums.Category | null
+    check: boolean | null
   }
 
   export type AddressMaxAggregateOutputType = {
@@ -3496,6 +3493,7 @@ export namespace Prisma {
     name: string | null
     image_url: string | null
     category: $Enums.Category | null
+    check: boolean | null
   }
 
   export type AddressCountAggregateOutputType = {
@@ -3503,6 +3501,7 @@ export namespace Prisma {
     name: number
     image_url: number
     category: number
+    check: number
     _all: number
   }
 
@@ -3520,6 +3519,7 @@ export namespace Prisma {
     name?: true
     image_url?: true
     category?: true
+    check?: true
   }
 
   export type AddressMaxAggregateInputType = {
@@ -3527,6 +3527,7 @@ export namespace Prisma {
     name?: true
     image_url?: true
     category?: true
+    check?: true
   }
 
   export type AddressCountAggregateInputType = {
@@ -3534,6 +3535,7 @@ export namespace Prisma {
     name?: true
     image_url?: true
     category?: true
+    check?: true
     _all?: true
   }
 
@@ -3628,6 +3630,7 @@ export namespace Prisma {
     name: string
     image_url: string
     category: $Enums.Category
+    check: boolean
     _count: AddressCountAggregateOutputType | null
     _avg: AddressAvgAggregateOutputType | null
     _sum: AddressSumAggregateOutputType | null
@@ -3654,6 +3657,7 @@ export namespace Prisma {
     name?: boolean
     image_url?: boolean
     category?: boolean
+    check?: boolean
     relations?: boolean | Address$relationsArgs<ExtArgs>
     _count?: boolean | AddressCountOutputTypeDefaultArgs<ExtArgs>
   }, ExtArgs["result"]["address"]>
@@ -3663,6 +3667,7 @@ export namespace Prisma {
     name?: boolean
     image_url?: boolean
     category?: boolean
+    check?: boolean
   }, ExtArgs["result"]["address"]>
 
   export type AddressSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
@@ -3670,6 +3675,7 @@ export namespace Prisma {
     name?: boolean
     image_url?: boolean
     category?: boolean
+    check?: boolean
   }, ExtArgs["result"]["address"]>
 
   export type AddressSelectScalar = {
@@ -3677,9 +3683,10 @@ export namespace Prisma {
     name?: boolean
     image_url?: boolean
     category?: boolean
+    check?: boolean
   }
 
-  export type AddressOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "name" | "image_url" | "category", ExtArgs["result"]["address"]>
+  export type AddressOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "name" | "image_url" | "category" | "check", ExtArgs["result"]["address"]>
   export type AddressInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     relations?: boolean | Address$relationsArgs<ExtArgs>
     _count?: boolean | AddressCountOutputTypeDefaultArgs<ExtArgs>
@@ -3697,6 +3704,7 @@ export namespace Prisma {
       name: string
       image_url: string
       category: $Enums.Category
+      check: boolean
     }, ExtArgs["result"]["address"]>
     composites: {}
   }
@@ -4125,6 +4133,7 @@ export namespace Prisma {
     readonly name: FieldRef<"Address", 'String'>
     readonly image_url: FieldRef<"Address", 'String'>
     readonly category: FieldRef<"Address", 'Category'>
+    readonly check: FieldRef<"Address", 'Boolean'>
   }
     
 
@@ -5690,8 +5699,8 @@ export namespace Prisma {
 
   export const RoadScalarFieldEnum: {
     id: 'id',
-    days: 'days',
     attempt_coins: 'attempt_coins',
+    check: 'check',
     created_at: 'created_at'
   };
 
@@ -5702,7 +5711,8 @@ export namespace Prisma {
     id: 'id',
     name: 'name',
     image_url: 'image_url',
-    category: 'category'
+    category: 'category',
+    check: 'check'
   };
 
   export type AddressScalarFieldEnum = (typeof AddressScalarFieldEnum)[keyof typeof AddressScalarFieldEnum]
@@ -5778,6 +5788,13 @@ export namespace Prisma {
    * Reference to a field of type 'DateTime[]'
    */
   export type ListDateTimeFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'DateTime[]'>
+    
+
+
+  /**
+   * Reference to a field of type 'Boolean'
+   */
+  export type BooleanFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'Boolean'>
     
 
 
@@ -5879,16 +5896,16 @@ export namespace Prisma {
     OR?: RoadWhereInput[]
     NOT?: RoadWhereInput | RoadWhereInput[]
     id?: IntFilter<"Road"> | number
-    days?: IntFilter<"Road"> | number
     attempt_coins?: IntFilter<"Road"> | number
+    check?: BoolFilter<"Road"> | boolean
     created_at?: DateTimeFilter<"Road"> | Date | string
     relations?: RelationListRelationFilter
   }
 
   export type RoadOrderByWithRelationInput = {
     id?: SortOrder
-    days?: SortOrder
     attempt_coins?: SortOrder
+    check?: SortOrder
     created_at?: SortOrder
     relations?: RelationOrderByRelationAggregateInput
   }
@@ -5898,16 +5915,16 @@ export namespace Prisma {
     AND?: RoadWhereInput | RoadWhereInput[]
     OR?: RoadWhereInput[]
     NOT?: RoadWhereInput | RoadWhereInput[]
-    days?: IntFilter<"Road"> | number
     attempt_coins?: IntFilter<"Road"> | number
+    check?: BoolFilter<"Road"> | boolean
     created_at?: DateTimeFilter<"Road"> | Date | string
     relations?: RelationListRelationFilter
   }, "id">
 
   export type RoadOrderByWithAggregationInput = {
     id?: SortOrder
-    days?: SortOrder
     attempt_coins?: SortOrder
+    check?: SortOrder
     created_at?: SortOrder
     _count?: RoadCountOrderByAggregateInput
     _avg?: RoadAvgOrderByAggregateInput
@@ -5921,8 +5938,8 @@ export namespace Prisma {
     OR?: RoadScalarWhereWithAggregatesInput[]
     NOT?: RoadScalarWhereWithAggregatesInput | RoadScalarWhereWithAggregatesInput[]
     id?: IntWithAggregatesFilter<"Road"> | number
-    days?: IntWithAggregatesFilter<"Road"> | number
     attempt_coins?: IntWithAggregatesFilter<"Road"> | number
+    check?: BoolWithAggregatesFilter<"Road"> | boolean
     created_at?: DateTimeWithAggregatesFilter<"Road"> | Date | string
   }
 
@@ -5934,6 +5951,7 @@ export namespace Prisma {
     name?: StringFilter<"Address"> | string
     image_url?: StringFilter<"Address"> | string
     category?: EnumCategoryFilter<"Address"> | $Enums.Category
+    check?: BoolFilter<"Address"> | boolean
     relations?: RelationListRelationFilter
   }
 
@@ -5942,6 +5960,7 @@ export namespace Prisma {
     name?: SortOrder
     image_url?: SortOrder
     category?: SortOrder
+    check?: SortOrder
     relations?: RelationOrderByRelationAggregateInput
   }
 
@@ -5953,6 +5972,7 @@ export namespace Prisma {
     name?: StringFilter<"Address"> | string
     image_url?: StringFilter<"Address"> | string
     category?: EnumCategoryFilter<"Address"> | $Enums.Category
+    check?: BoolFilter<"Address"> | boolean
     relations?: RelationListRelationFilter
   }, "id">
 
@@ -5961,6 +5981,7 @@ export namespace Prisma {
     name?: SortOrder
     image_url?: SortOrder
     category?: SortOrder
+    check?: SortOrder
     _count?: AddressCountOrderByAggregateInput
     _avg?: AddressAvgOrderByAggregateInput
     _max?: AddressMaxOrderByAggregateInput
@@ -5976,6 +5997,7 @@ export namespace Prisma {
     name?: StringWithAggregatesFilter<"Address"> | string
     image_url?: StringWithAggregatesFilter<"Address"> | string
     category?: EnumCategoryWithAggregatesFilter<"Address"> | $Enums.Category
+    check?: BoolWithAggregatesFilter<"Address"> | boolean
   }
 
   export type RelationWhereInput = {
@@ -6102,52 +6124,52 @@ export namespace Prisma {
   }
 
   export type RoadCreateInput = {
-    days: number
     attempt_coins: number
+    check: boolean
     created_at?: Date | string
     relations?: RelationCreateNestedManyWithoutRoadInput
   }
 
   export type RoadUncheckedCreateInput = {
     id?: number
-    days: number
     attempt_coins: number
+    check: boolean
     created_at?: Date | string
     relations?: RelationUncheckedCreateNestedManyWithoutRoadInput
   }
 
   export type RoadUpdateInput = {
-    days?: IntFieldUpdateOperationsInput | number
     attempt_coins?: IntFieldUpdateOperationsInput | number
+    check?: BoolFieldUpdateOperationsInput | boolean
     created_at?: DateTimeFieldUpdateOperationsInput | Date | string
     relations?: RelationUpdateManyWithoutRoadNestedInput
   }
 
   export type RoadUncheckedUpdateInput = {
     id?: IntFieldUpdateOperationsInput | number
-    days?: IntFieldUpdateOperationsInput | number
     attempt_coins?: IntFieldUpdateOperationsInput | number
+    check?: BoolFieldUpdateOperationsInput | boolean
     created_at?: DateTimeFieldUpdateOperationsInput | Date | string
     relations?: RelationUncheckedUpdateManyWithoutRoadNestedInput
   }
 
   export type RoadCreateManyInput = {
     id?: number
-    days: number
     attempt_coins: number
+    check: boolean
     created_at?: Date | string
   }
 
   export type RoadUpdateManyMutationInput = {
-    days?: IntFieldUpdateOperationsInput | number
     attempt_coins?: IntFieldUpdateOperationsInput | number
+    check?: BoolFieldUpdateOperationsInput | boolean
     created_at?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
   export type RoadUncheckedUpdateManyInput = {
     id?: IntFieldUpdateOperationsInput | number
-    days?: IntFieldUpdateOperationsInput | number
     attempt_coins?: IntFieldUpdateOperationsInput | number
+    check?: BoolFieldUpdateOperationsInput | boolean
     created_at?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
@@ -6155,6 +6177,7 @@ export namespace Prisma {
     name: string
     image_url: string
     category: $Enums.Category
+    check: boolean
     relations?: RelationCreateNestedManyWithoutAddressInput
   }
 
@@ -6163,6 +6186,7 @@ export namespace Prisma {
     name: string
     image_url: string
     category: $Enums.Category
+    check: boolean
     relations?: RelationUncheckedCreateNestedManyWithoutAddressInput
   }
 
@@ -6170,6 +6194,7 @@ export namespace Prisma {
     name?: StringFieldUpdateOperationsInput | string
     image_url?: StringFieldUpdateOperationsInput | string
     category?: EnumCategoryFieldUpdateOperationsInput | $Enums.Category
+    check?: BoolFieldUpdateOperationsInput | boolean
     relations?: RelationUpdateManyWithoutAddressNestedInput
   }
 
@@ -6178,6 +6203,7 @@ export namespace Prisma {
     name?: StringFieldUpdateOperationsInput | string
     image_url?: StringFieldUpdateOperationsInput | string
     category?: EnumCategoryFieldUpdateOperationsInput | $Enums.Category
+    check?: BoolFieldUpdateOperationsInput | boolean
     relations?: RelationUncheckedUpdateManyWithoutAddressNestedInput
   }
 
@@ -6186,12 +6212,14 @@ export namespace Prisma {
     name: string
     image_url: string
     category: $Enums.Category
+    check: boolean
   }
 
   export type AddressUpdateManyMutationInput = {
     name?: StringFieldUpdateOperationsInput | string
     image_url?: StringFieldUpdateOperationsInput | string
     category?: EnumCategoryFieldUpdateOperationsInput | $Enums.Category
+    check?: BoolFieldUpdateOperationsInput | boolean
   }
 
   export type AddressUncheckedUpdateManyInput = {
@@ -6199,6 +6227,7 @@ export namespace Prisma {
     name?: StringFieldUpdateOperationsInput | string
     image_url?: StringFieldUpdateOperationsInput | string
     category?: EnumCategoryFieldUpdateOperationsInput | $Enums.Category
+    check?: BoolFieldUpdateOperationsInput | boolean
   }
 
   export type RelationCreateInput = {
@@ -6377,37 +6406,48 @@ export namespace Prisma {
     _max?: NestedDateTimeFilter<$PrismaModel>
   }
 
+  export type BoolFilter<$PrismaModel = never> = {
+    equals?: boolean | BooleanFieldRefInput<$PrismaModel>
+    not?: NestedBoolFilter<$PrismaModel> | boolean
+  }
+
   export type RoadCountOrderByAggregateInput = {
     id?: SortOrder
-    days?: SortOrder
     attempt_coins?: SortOrder
+    check?: SortOrder
     created_at?: SortOrder
   }
 
   export type RoadAvgOrderByAggregateInput = {
     id?: SortOrder
-    days?: SortOrder
     attempt_coins?: SortOrder
   }
 
   export type RoadMaxOrderByAggregateInput = {
     id?: SortOrder
-    days?: SortOrder
     attempt_coins?: SortOrder
+    check?: SortOrder
     created_at?: SortOrder
   }
 
   export type RoadMinOrderByAggregateInput = {
     id?: SortOrder
-    days?: SortOrder
     attempt_coins?: SortOrder
+    check?: SortOrder
     created_at?: SortOrder
   }
 
   export type RoadSumOrderByAggregateInput = {
     id?: SortOrder
-    days?: SortOrder
     attempt_coins?: SortOrder
+  }
+
+  export type BoolWithAggregatesFilter<$PrismaModel = never> = {
+    equals?: boolean | BooleanFieldRefInput<$PrismaModel>
+    not?: NestedBoolWithAggregatesFilter<$PrismaModel> | boolean
+    _count?: NestedIntFilter<$PrismaModel>
+    _min?: NestedBoolFilter<$PrismaModel>
+    _max?: NestedBoolFilter<$PrismaModel>
   }
 
   export type EnumCategoryFilter<$PrismaModel = never> = {
@@ -6422,6 +6462,7 @@ export namespace Prisma {
     name?: SortOrder
     image_url?: SortOrder
     category?: SortOrder
+    check?: SortOrder
   }
 
   export type AddressAvgOrderByAggregateInput = {
@@ -6433,6 +6474,7 @@ export namespace Prisma {
     name?: SortOrder
     image_url?: SortOrder
     category?: SortOrder
+    check?: SortOrder
   }
 
   export type AddressMinOrderByAggregateInput = {
@@ -6440,6 +6482,7 @@ export namespace Prisma {
     name?: SortOrder
     image_url?: SortOrder
     category?: SortOrder
+    check?: SortOrder
   }
 
   export type AddressSumOrderByAggregateInput = {
@@ -6582,6 +6625,10 @@ export namespace Prisma {
     connectOrCreate?: RelationCreateOrConnectWithoutRoadInput | RelationCreateOrConnectWithoutRoadInput[]
     createMany?: RelationCreateManyRoadInputEnvelope
     connect?: RelationWhereUniqueInput | RelationWhereUniqueInput[]
+  }
+
+  export type BoolFieldUpdateOperationsInput = {
+    set?: boolean
   }
 
   export type RelationUpdateManyWithoutRoadNestedInput = {
@@ -6794,6 +6841,19 @@ export namespace Prisma {
     _max?: NestedDateTimeFilter<$PrismaModel>
   }
 
+  export type NestedBoolFilter<$PrismaModel = never> = {
+    equals?: boolean | BooleanFieldRefInput<$PrismaModel>
+    not?: NestedBoolFilter<$PrismaModel> | boolean
+  }
+
+  export type NestedBoolWithAggregatesFilter<$PrismaModel = never> = {
+    equals?: boolean | BooleanFieldRefInput<$PrismaModel>
+    not?: NestedBoolWithAggregatesFilter<$PrismaModel> | boolean
+    _count?: NestedIntFilter<$PrismaModel>
+    _min?: NestedBoolFilter<$PrismaModel>
+    _max?: NestedBoolFilter<$PrismaModel>
+  }
+
   export type NestedEnumCategoryFilter<$PrismaModel = never> = {
     equals?: $Enums.Category | EnumCategoryFieldRefInput<$PrismaModel>
     in?: $Enums.Category[] | ListEnumCategoryFieldRefInput<$PrismaModel>
@@ -6958,6 +7018,7 @@ export namespace Prisma {
     name: string
     image_url: string
     category: $Enums.Category
+    check: boolean
   }
 
   export type AddressUncheckedCreateWithoutRelationsInput = {
@@ -6965,6 +7026,7 @@ export namespace Prisma {
     name: string
     image_url: string
     category: $Enums.Category
+    check: boolean
   }
 
   export type AddressCreateOrConnectWithoutRelationsInput = {
@@ -6973,15 +7035,15 @@ export namespace Prisma {
   }
 
   export type RoadCreateWithoutRelationsInput = {
-    days: number
     attempt_coins: number
+    check: boolean
     created_at?: Date | string
   }
 
   export type RoadUncheckedCreateWithoutRelationsInput = {
     id?: number
-    days: number
     attempt_coins: number
+    check: boolean
     created_at?: Date | string
   }
 
@@ -7033,6 +7095,7 @@ export namespace Prisma {
     name?: StringFieldUpdateOperationsInput | string
     image_url?: StringFieldUpdateOperationsInput | string
     category?: EnumCategoryFieldUpdateOperationsInput | $Enums.Category
+    check?: BoolFieldUpdateOperationsInput | boolean
   }
 
   export type AddressUncheckedUpdateWithoutRelationsInput = {
@@ -7040,6 +7103,7 @@ export namespace Prisma {
     name?: StringFieldUpdateOperationsInput | string
     image_url?: StringFieldUpdateOperationsInput | string
     category?: EnumCategoryFieldUpdateOperationsInput | $Enums.Category
+    check?: BoolFieldUpdateOperationsInput | boolean
   }
 
   export type RoadUpsertWithoutRelationsInput = {
@@ -7054,15 +7118,15 @@ export namespace Prisma {
   }
 
   export type RoadUpdateWithoutRelationsInput = {
-    days?: IntFieldUpdateOperationsInput | number
     attempt_coins?: IntFieldUpdateOperationsInput | number
+    check?: BoolFieldUpdateOperationsInput | boolean
     created_at?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
   export type RoadUncheckedUpdateWithoutRelationsInput = {
     id?: IntFieldUpdateOperationsInput | number
-    days?: IntFieldUpdateOperationsInput | number
     attempt_coins?: IntFieldUpdateOperationsInput | number
+    check?: BoolFieldUpdateOperationsInput | boolean
     created_at?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 

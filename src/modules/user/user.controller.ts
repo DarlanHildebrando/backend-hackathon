@@ -1,5 +1,5 @@
 import type { ICreateUser, IUpdateUser, IUser } from "./user.module.js";
-import { UserService } from "./user.serivce.js";
+import { UserService } from "./user.service.js";
 import type { Request, Response } from "express";
 import { updateUserSchema, userSchema } from "./user.zod.js";
 import bcrypt from "bcrypt";

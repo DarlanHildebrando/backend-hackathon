@@ -1,6 +1,6 @@
 import { UserController } from "./user.controller.js";
 import { Router } from "express";
-import { UserService } from "./user.serivce.js";
+import { UserService } from "./user.service.js";
 import { authenticateToken } from "../auth/auth.middleware.js";
 
 const userRoutes: Router = Router();
@@ -9,7 +9,7 @@ const userController: UserController = new UserController(userService);
 
 userRoutes.post("/", userController.postUser.bind(userController));
 
-userRoutes.use(authenticateToken);
+// userRoutes.use(authenticateToken);
 
 userRoutes.get("/:id", userController.getUser.bind(userController));
 userRoutes.get("/", userController.getUsers.bind(userController));
