@@ -140,6 +140,7 @@ exports.Prisma.RoadScalarFieldEnum = {
 exports.Prisma.AddressScalarFieldEnum = {
   id: 'id',
   name: 'name',
+  image_url: 'image_url',
   category: 'category'
 };
 

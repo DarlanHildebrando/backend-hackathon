@@ -3487,18 +3487,21 @@ export namespace Prisma {
   export type AddressMinAggregateOutputType = {
     id: number | null
     name: string | null
+    image_url: string | null
     category: $Enums.Category | null
   }
 
   export type AddressMaxAggregateOutputType = {
     id: number | null
     name: string | null
+    image_url: string | null
     category: $Enums.Category | null
   }
 
   export type AddressCountAggregateOutputType = {
     id: number
     name: number
+    image_url: number
     category: number
     _all: number
   }
@@ -3515,18 +3518,21 @@ export namespace Prisma {
   export type AddressMinAggregateInputType = {
     id?: true
     name?: true
+    image_url?: true
     category?: true
   }
 
   export type AddressMaxAggregateInputType = {
     id?: true
     name?: true
+    image_url?: true
     category?: true
   }
 
   export type AddressCountAggregateInputType = {
     id?: true
     name?: true
+    image_url?: true
     category?: true
     _all?: true
   }
@@ -3620,6 +3626,7 @@ export namespace Prisma {
   export type AddressGroupByOutputType = {
     id: number
     name: string
+    image_url: string
     category: $Enums.Category
     _count: AddressCountAggregateOutputType | null
     _avg: AddressAvgAggregateOutputType | null
@@ -3645,6 +3652,7 @@ export namespace Prisma {
   export type AddressSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
     name?: boolean
+    image_url?: boolean
     category?: boolean
     relations?: boolean | Address$relationsArgs<ExtArgs>
     _count?: boolean | AddressCountOutputTypeDefaultArgs<ExtArgs>
@@ -3653,22 +3661,25 @@ export namespace Prisma {
   export type AddressSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
     name?: boolean
+    image_url?: boolean
     category?: boolean
   }, ExtArgs["result"]["address"]>
 
   export type AddressSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
     name?: boolean
+    image_url?: boolean
     category?: boolean
   }, ExtArgs["result"]["address"]>
 
   export type AddressSelectScalar = {
     id?: boolean
     name?: boolean
+    image_url?: boolean
     category?: boolean
   }
 
-  export type AddressOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "name" | "category", ExtArgs["result"]["address"]>
+  export type AddressOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "name" | "image_url" | "category", ExtArgs["result"]["address"]>
   export type AddressInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     relations?: boolean | Address$relationsArgs<ExtArgs>
     _count?: boolean | AddressCountOutputTypeDefaultArgs<ExtArgs>
@@ -3684,6 +3695,7 @@ export namespace Prisma {
     scalars: $Extensions.GetPayloadResult<{
       id: number
       name: string
+      image_url: string
       category: $Enums.Category
     }, ExtArgs["result"]["address"]>
     composites: {}
@@ -4111,6 +4123,7 @@ export namespace Prisma {
   interface AddressFieldRefs {
     readonly id: FieldRef<"Address", 'Int'>
     readonly name: FieldRef<"Address", 'String'>
+    readonly image_url: FieldRef<"Address", 'String'>
     readonly category: FieldRef<"Address", 'Category'>
   }
     
@@ -5688,6 +5701,7 @@ export namespace Prisma {
   export const AddressScalarFieldEnum: {
     id: 'id',
     name: 'name',
+    image_url: 'image_url',
     category: 'category'
   };
 
@@ -5918,6 +5932,7 @@ export namespace Prisma {
     NOT?: AddressWhereInput | AddressWhereInput[]
     id?: IntFilter<"Address"> | number
     name?: StringFilter<"Address"> | string
+    image_url?: StringFilter<"Address"> | string
     category?: EnumCategoryFilter<"Address"> | $Enums.Category
     relations?: RelationListRelationFilter
   }
@@ -5925,6 +5940,7 @@ export namespace Prisma {
   export type AddressOrderByWithRelationInput = {
     id?: SortOrder
     name?: SortOrder
+    image_url?: SortOrder
     category?: SortOrder
     relations?: RelationOrderByRelationAggregateInput
   }
@@ -5935,6 +5951,7 @@ export namespace Prisma {
     OR?: AddressWhereInput[]
     NOT?: AddressWhereInput | AddressWhereInput[]
     name?: StringFilter<"Address"> | string
+    image_url?: StringFilter<"Address"> | string
     category?: EnumCategoryFilter<"Address"> | $Enums.Category
     relations?: RelationListRelationFilter
   }, "id">
@@ -5942,6 +5959,7 @@ export namespace Prisma {
   export type AddressOrderByWithAggregationInput = {
     id?: SortOrder
     name?: SortOrder
+    image_url?: SortOrder
     category?: SortOrder
     _count?: AddressCountOrderByAggregateInput
     _avg?: AddressAvgOrderByAggregateInput
@@ -5956,6 +5974,7 @@ export namespace Prisma {
     NOT?: AddressScalarWhereWithAggregatesInput | AddressScalarWhereWithAggregatesInput[]
     id?: IntWithAggregatesFilter<"Address"> | number
     name?: StringWithAggregatesFilter<"Address"> | string
+    image_url?: StringWithAggregatesFilter<"Address"> | string
     category?: EnumCategoryWithAggregatesFilter<"Address"> | $Enums.Category
   }
 
@@ -6134,6 +6153,7 @@ export namespace Prisma {
 
   export type AddressCreateInput = {
     name: string
+    image_url: string
     category: $Enums.Category
     relations?: RelationCreateNestedManyWithoutAddressInput
   }
@@ -6141,12 +6161,14 @@ export namespace Prisma {
   export type AddressUncheckedCreateInput = {
     id?: number
     name: string
+    image_url: string
     category: $Enums.Category
     relations?: RelationUncheckedCreateNestedManyWithoutAddressInput
   }
 
   export type AddressUpdateInput = {
     name?: StringFieldUpdateOperationsInput | string
+    image_url?: StringFieldUpdateOperationsInput | string
     category?: EnumCategoryFieldUpdateOperationsInput | $Enums.Category
     relations?: RelationUpdateManyWithoutAddressNestedInput
   }
@@ -6154,6 +6176,7 @@ export namespace Prisma {
   export type AddressUncheckedUpdateInput = {
     id?: IntFieldUpdateOperationsInput | number
     name?: StringFieldUpdateOperationsInput | string
+    image_url?: StringFieldUpdateOperationsInput | string
     category?: EnumCategoryFieldUpdateOperationsInput | $Enums.Category
     relations?: RelationUncheckedUpdateManyWithoutAddressNestedInput
   }
@@ -6161,17 +6184,20 @@ export namespace Prisma {
   export type AddressCreateManyInput = {
     id?: number
     name: string
+    image_url: string
     category: $Enums.Category
   }
 
   export type AddressUpdateManyMutationInput = {
     name?: StringFieldUpdateOperationsInput | string
+    image_url?: StringFieldUpdateOperationsInput | string
     category?: EnumCategoryFieldUpdateOperationsInput | $Enums.Category
   }
 
   export type AddressUncheckedUpdateManyInput = {
     id?: IntFieldUpdateOperationsInput | number
     name?: StringFieldUpdateOperationsInput | string
+    image_url?: StringFieldUpdateOperationsInput | string
     category?: EnumCategoryFieldUpdateOperationsInput | $Enums.Category
   }
 
@@ -6394,6 +6420,7 @@ export namespace Prisma {
   export type AddressCountOrderByAggregateInput = {
     id?: SortOrder
     name?: SortOrder
+    image_url?: SortOrder
     category?: SortOrder
   }
 
@@ -6404,12 +6431,14 @@ export namespace Prisma {
   export type AddressMaxOrderByAggregateInput = {
     id?: SortOrder
     name?: SortOrder
+    image_url?: SortOrder
     category?: SortOrder
   }
 
   export type AddressMinOrderByAggregateInput = {
     id?: SortOrder
     name?: SortOrder
+    image_url?: SortOrder
     category?: SortOrder
   }
 
@@ -6927,12 +6956,14 @@ export namespace Prisma {
 
   export type AddressCreateWithoutRelationsInput = {
     name: string
+    image_url: string
     category: $Enums.Category
   }
 
   export type AddressUncheckedCreateWithoutRelationsInput = {
     id?: number
     name: string
+    image_url: string
     category: $Enums.Category
   }
 
@@ -7000,12 +7031,14 @@ export namespace Prisma {
 
   export type AddressUpdateWithoutRelationsInput = {
     name?: StringFieldUpdateOperationsInput | string
+    image_url?: StringFieldUpdateOperationsInput | string
     category?: EnumCategoryFieldUpdateOperationsInput | $Enums.Category
   }
 
   export type AddressUncheckedUpdateWithoutRelationsInput = {
     id?: IntFieldUpdateOperationsInput | number
     name?: StringFieldUpdateOperationsInput | string
+    image_url?: StringFieldUpdateOperationsInput | string
     category?: EnumCategoryFieldUpdateOperationsInput | $Enums.Category
   }
 
