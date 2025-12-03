@@ -36,6 +36,7 @@ model Road {
   days          Int
   attempt_coins Int
   created_at    DateTime @default(now())
+  check Boolean @default(false)
 
   relations Relation[]
 }
@@ -45,6 +46,7 @@ model Address {
   name     String
   image_url String
   category Category
+  check Boolean @default(false)
 
   relations Relation[]
 }
