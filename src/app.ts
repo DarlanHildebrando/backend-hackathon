@@ -16,7 +16,7 @@ app.use("/relations", relationRouter);
 app.use("/users", userRouter);
 app.use("/auth", authRouter);
 app.use("/gemini", geminiRouter);
-app.use("/adress", addressRouter);
+app.use("/address", addressRouter);
 app.use("/roads", roadRouter);
 
 export default app;

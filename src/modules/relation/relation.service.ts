@@ -11,7 +11,7 @@ export class RelationService {
 
     async getRelation(id: number): Promise<IRelation | null> {
 
-        return prisma.relation.findUnique({ where: { id } });
+        return prisma.relation.findUnique({ where: { userId: id } });
     };
 
     async createRelation(data: ICreateRelation): Promise<IRelation> {
