@@ -1,43 +1,289 @@
 [
-  { "id": 1, "check": false, "name": "Catedral Metropolitana", "image_url": "/IMAGENS_TURISMO/atedral-metropolitana.webp", "category": "LARICA" },
-  { "id": 2, "check": false, "name": "Praia do Campeche", "image_url": "/IMAGENS_TURISMO/praia-campeche.jpg", "category": "PRAIA" },
-  { "id": 3, "check": false, "name": "Costa da Lagoa", "image_url": "/IMAGENS_TURISMO/costa_da_lagoa.jpg", "category": "TRILHA" },
-  { "id": 4, "check": false, "name": "Dunas de Joaquina", "image_url": "/IMAGENS_TURISMO/dunas_de_joaquina.jpeg", "category": "PRAIA" },
-  { "id": 5, "check": false, "name": "Jurerê Internacional", "image_url": "/IMAGENS_TURISMO/jurere_internacional.webp", "category": "PRAIA" },
-  { "id": 6, "check": false, "name": "Jurerê Tradicional", "image_url": "/IMAGENS_TURISMO/jurere_tradicional.jpg", "category": "PRAIA" },
-  { "id": 7, "check": false, "name": "Lagoa da Conceição", "image_url": "/IMAGENS_TURISMO/lagoa_da_conceicao.jpeg", "category": "TRILHA" },
-  { "id": 8, "check": false, "name": "Lagoinha do Leste", "image_url": "/IMAGENS_TURISMO/lagoa_da_leste.jpeg", "category": "TRILHA" },
-  { "id": 9, "check": false, "name": "Mercado Público de Florianópolis", "image_url": "/IMAGENS_TURISMO/mercado_publico.jpeg", "category": "LARICA" },
-  { "id": 10, "check": false, "name": "Mirante da Ponte Hercílio Luz", "image_url": "/IMAGENS_TURISMO/mirante_da_ponte_hercilio_luz.jpeg", "category": "TRILHA" },
-  { "id": 11, "check": false, "name": "Mirante do Morro das Pedras", "image_url": "/IMAGENS_TURISMO/mirante_do_morro_das_pedras.jpeg", "category": "TRILHA" },
-  { "id": 12, "check": false, "name": "Mirante Morro da Cruz", "image_url": "/IMAGENS_TURISMO/mirante_morro_da_cruz.jpeg", "category": "TRILHA" },
-  { "id": 13, "check": false, "name": "Morro da Lagoa", "image_url": "/IMAGENS_TURISMO/morro_da_lagoa.jpg", "category": "TRILHA" },
-  { "id": 14, "check": false, "name": "Museu Histórico", "image_url": "/IMAGENS_TURISMO/museu_historico.jpeg", "category": "LARICA" },
-  { "id": 15, "check": false, "name": "Parque da Luz", "image_url": "/IMAGENS_TURISMO/parque_da_luz.jpeg", "category": "TRILHA" },
-  { "id": 16, "check": false, "name": "Parque Municipal Lagoa do Peri", "image_url": "/IMAGENS_TURISMO/parque_municipal_lagoa_do_peri.jpeg", "category": "TRILHA" },
-  { "id": 17, "check": false, "name": "Piscinas Naturais da Ilha do Campeche", "image_url": "/IMAGENS_TURISMO/piscinas-naturais-da-ilha-do-campeche.jpg", "category": "PRAIA" },
-  { "id": 18, "check": false, "name": "Piscinas Naturais Barra da Lagoa", "image_url": "/IMAGENS_TURISMO/piscinas_naturais_barra_lagoa.jpg", "category": "PRAIA" },
-  { "id": 19, "check": false, "name": "Ponta de Canas", "image_url": "/IMAGENS_TURISMO/ponta_de_canas.jpeg", "category": "PRAIA" },
-  { "id": 20, "check": false, "name": "Ponte Hercílio Luz", "image_url": "/IMAGENS_TURISMO/ponte_hercilio_luz.jpeg", "category": "LARICA" },
-  { "id": 21, "check": false, "name": "Praça XV de Novembro", "image_url": "/IMAGENS_TURISMO/praca-xv-de-novembro.jpg", "category": "LARICA" },
-  { "id": 22, "check": false, "name": "Praia Campeche", "image_url": "/IMAGENS_TURISMO/praia-campeche.jpg", "category": "PRAIA" },
-  { "id": 23, "check": false, "name": "Praia da Armação", "image_url": "/IMAGENS_TURISMO/praia-da-armacao.jpg", "category": "PRAIA" },
-  { "id": 24, "check": false, "name": "Praia da Joaquina Florianópolis", "image_url": "/IMAGENS_TURISMO/praia-da-joaquina-florianopolis.webp", "category": "PRAIA" },
-  { "id": 25, "check": false, "name": "Praia da Tapera", "image_url": "/IMAGENS_TURISMO/praia-da-tapera.jpeg", "category": "PRAIA" },
-  { "id": 26, "check": false, "name": "Praia Daniela", "image_url": "/IMAGENS_TURISMO/praia_da_daniela.jpg", "category": "PRAIA" },
-  { "id": 27, "check": false, "name": "Praia do Forte", "image_url": "/IMAGENS_TURISMO/praia_do_forte.jpeg", "category": "PRAIA" },
-  { "id": 28, "check": false, "name": "Praia do Moçambique", "image_url": "/IMAGENS_TURISMO/praia-do-mocambique.webp", "category": "PRAIA" },
-  { "id": 29, "check": false, "name": "Praia do Ribeiro", "image_url": "/IMAGENS_TURISMO/praia_do-ribeiro.jpg", "category": "PRAIA" },
-  { "id": 30, "check": false, "name": "Praia do Santinho", "image_url": "/IMAGENS_TURISMO/praia-do-santinho.jpg", "category": "PRAIA" },
-  { "id": 31, "check": false, "name": "Praia dos Ingleses em Florianópolis", "image_url": "/IMAGENS_TURISMO/praia-dos-ingleses-em-florianopolis.webp", "category": "PRAIA" },
-  { "id": 32, "check": false, "name": "Praia dos Naufragados", "image_url": "/IMAGENS_TURISMO/ribeirao_da-ilha.jpg", "category": "PRAIA" },
-  { "id": 33, "check": false, "name": "Praia da Galheta", "image_url": "/IMAGENS_TURISMO/praia_da_galheta.jpeg", "category": "PRAIA" },
-  { "id": 34, "check": false, "name": "Praia da Solidão", "image_url": "/IMAGENS_TURISMO/praia_da_solidao.jpg", "category": "PRAIA" },
-  { "id": 35, "check": false, "name": "Praia do Cacupé", "image_url": "/IMAGENS_TURISMO/praia_do_cacupé.jpg", "category": "PRAIA" },
-  { "id": 36, "check": false, "name": "Praia do Matadeiro", "image_url": "/IMAGENS_TURISMO/praia_do_matadeiro.jpg", "category": "PRAIA" },
-  { "id": 37, "check": false, "name": "Praia do Saquinho", "image_url": "/IMAGENS_TURISMO/praia_do_saquinho.jpg", "category": "PRAIA" },
-  { "id": 38, "check": false, "name": "Praia Mole", "image_url": "/IMAGENS_TURISMO/praia_mole.jpg", "category": "PRAIA" },
-  { "id": 39, "check": false, "name": "Praia Ponta do Sambaqui", "image_url": "/IMAGENS_TURISMO/praia_ponta_do_sambaqui.jpeg", "category": "PRAIA" },
-  { "id": 40, "check": false, "name": "Ribeirão da Ilha", "image_url": "/IMAGENS_TURISMO/ribeirao_da-ilha.jpg", "category": "LARICA" },
-  { "id": 41, "check": false, "name": "Santo Antônio de Lisboa", "image_url": "/IMAGENS_TURISMO/santo-antonio-lisboa.jpg", "category": "LARICA" }
+  {
+    "id": 1,
+    "check": false,
+    "name": "Catedral Metropolitana",
+    "image_url": "./elementos_temporarios/atedral-metropolitana.webp",
+    "category": "TRILHA"
+  },
+  {
+    "id": 2,
+    "check": false,
+    "name": "Bairro Campeche",
+    "image_url": "./elementos_temporarios/bairro_campeche.jpeg",
+    "category": "PRAIA"
+  },
+  {
+    "id": 3,
+    "check": false,
+    "name": "Costa Da Lagoa",
+    "image_url": "./elementos_temporarios/costa_da_lagoa.jpg",
+    "category": "PRAIA"
+  },
+  {
+    "id": 4,
+    "check": false,
+    "name": "Dunas De Joaquina",
+    "image_url": "./elementos_temporarios/dunas_de_joaquina.jpeg",
+    "category": "PRAIA"
+  },
+  {
+    "id": 5,
+    "check": false,
+    "name": "Jurerê Internacional",
+    "image_url": "./elementos_temporarios/jurere_internacional.webp",
+    "category": "PRAIA"
+  },
+  {
+    "id": 6,
+    "check": false,
+    "name": "Jurerê Tradicional",
+    "image_url": "./elementos_temporarios/jurere_tradicional.jpg",
+    "category": "PRAIA"
+  },
+  {
+    "id": 7,
+    "check": false,
+    "name": "Lagoa Da Conceição",
+    "image_url": "./elementos_temporarios/lagoa_da_coinceicao.jpeg",
+    "category": "LARICA"
+  },
+  {
+    "id": 8,
+    "check": false,
+    "name": "Lagoinha Do Leste",
+    "image_url": "./elementos_temporarios/lagoinha_do_leste.jpeg",
+    "category": "PRAIA"
+  },
+  {
+    "id": 9,
+    "check": false,
+    "name": "Mercado Público",
+    "image_url": "./elementos_temporarios/mercado_publico.jpeg",
+    "category": "LARICA"
+  },
+  {
+    "id": 10,
+    "check": false,
+    "name": "Mirante Da Ponte Hercílio Luz",
+    "image_url": "./elementos_temporarios/mirante_da_ponte_hercilio_luz.jpeg",
+    "category": "TRILHA"
+  },
+  {
+    "id": 11,
+    "check": false,
+    "name": "Mirante Do Morro Das Pedras",
+    "image_url": "./elementos_temporarios/mirante_do_morro_das_pedras.jpg",
+    "category": "LARICA"
+  },
+  {
+    "id": 12,
+    "check": false,
+    "name": "Mirante Morro Da Cruz",
+    "image_url": "./elementos_temporarios/mirante_morro_da_cruz.jpeg",
+    "category": "LARICA"
+  },
+  {
+    "id": 13,
+    "check": false,
+    "name": "Morro Da Lagoa",
+    "image_url": "./elementos_temporarios/morro_da_lagoa.jpg",
+    "category": "TRILHA"
+  },
+  {
+    "id": 14,
+    "check": false,
+    "name": "Museu Histórico",
+    "image_url": "./elementos_temporarios/museu_historico.jpeg",
+    "category": "LARICA"
+  },
+  {
+    "id": 15,
+    "check": false,
+    "name": "Parque Da Luz",
+    "image_url": "./elementos_temporarios/parque_da_luz.jpeg",
+    "category": "LARICA"
+  },
+  {
+    "id": 16,
+    "check": false,
+    "name": "Parque Municipal Lagoa Do Peri",
+    "image_url": "./elementos_temporarios/parque_municipal_lagoa_do_peri.jpeg",
+    "category": "PRAIA"
+  },
+  {
+    "id": 17,
+    "check": false,
+    "name": "Piscinas Naturais Da Ilha Do Campeche",
+    "image_url": "./elementos_temporarios/piscinas-naturais-da-ilha-do-campeche.jpg",
+    "category": "PRAIA"
+  },
+  {
+    "id": 18,
+    "check": false,
+    "name": "Piscinas Naturais Barra Lagoa",
+    "image_url": "./elementos_temporarios/piscinas_naturais_barra_lagoa.jpg",
+    "category": "PRAIA"
+  },
+  {
+    "id": 19,
+    "check": false,
+    "name": "Ponta De Canas",
+    "image_url": "./elementos_temporarios/ponta_de_canas.jpeg",
+    "category": "PRAIA"
+  },
+  {
+    "id": 20,
+    "check": false,
+    "name": "Ponte Hercílio Luz",
+    "image_url": "./elementos_temporarios/ponte_hercilio_luz.jpeg",
+    "category": "TRILHA"
+  },
+  {
+    "id": 21,
+    "check": false,
+    "name": "Praça Xv De Novembro",
+    "image_url": "./elementos_temporarios/praca-xv-de-novembro.jpg",
+    "category": "TRILHA"
+  },
+  {
+    "id": 22,
+    "check": false,
+    "name": "Praia Campeche",
+    "image_url": "./elementos_temporarios/praia-campeche.jpg",
+    "category": "PRAIA"
+  },
+  {
+    "id": 23,
+    "check": false,
+    "name": "Praia Da Armação",
+    "image_url": "./elementos_temporarios/praia-da-armacao.jpg",
+    "category": "PRAIA"
+  },
+  {
+    "id": 24,
+    "check": false,
+    "name": "Praia Da Joaquina Florianópolis",
+    "image_url": "./elementos_temporarios/praia-da-joaquina-florianopolis.jpg.webp",
+    "category": "PRAIA"
+  },
+  {
+    "id": 25,
+    "check": false,
+    "name": "Praia Da Tapera",
+    "image_url": "./elementos_temporarios/praia-da-tapera.jpg",
+    "category": "PRAIA"
+  },
+  {
+    "id": 26,
+    "check": false,
+    "name": "Praia Daniela",
+    "image_url": "./elementos_temporarios/praia-daniela.jpg",
+    "category": "PRAIA"
+  },
+  {
+    "id": 27,
+    "check": false,
+    "name": "Praia Do Forte",
+    "image_url": "./elementos_temporarios/praia-do-forte.jpg",
+    "category": "PRAIA"
+  },
+  {
+    "id": 28,
+    "check": false,
+    "name": "Praia Do Moçambique",
+    "image_url": "./elementos_temporarios/praia-do-mocambique.webp",
+    "category": "PRAIA"
+  },
+  {
+    "id": 29,
+    "check": false,
+    "name": "Praia Do Ribeiro",
+    "image_url": "./elementos_temporarios/Praia-do-Ribeiro.jpg",
+    "category": "PRAIA"
+  },
+  {
+    "id": 30,
+    "check": false,
+    "name": "Praia Do Santinho",
+    "image_url": "./elementos_temporarios/praia-do-santinho.jpg",
+    "category": "PRAIA"
+  },
+  {
+    "id": 31,
+    "check": false,
+    "name": "Praia Dos Ingleses Em Florianópolis",
+    "image_url": "./elementos_temporarios/praia-dos-ingleses-em-florianopolis.webp",
+    "category": "PRAIA"
+  },
+  {
+    "id": 32,
+    "check": false,
+    "name": "Praia Dos Naufragados",
+    "image_url": "./elementos_temporarios/praia-dos-naufragados.jpg",
+    "category": "PRAIA"
+  },
+  {
+    "id": 33,
+    "check": false,
+    "name": "Praia Da Galheta",
+    "image_url": "./elementos_temporarios/praia_da_galheta.jpeg",
+    "category": "PRAIA"
+  },
+  {
+    "id": 34,
+    "check": false,
+    "name": "Praia Da Solidão",
+    "image_url": "./elementos_temporarios/praia_da_solidao.jpg",
+    "category": "PRAIA"
+  },
+  {
+    "id": 35,
+    "check": false,
+    "name": "Praia Do Cacupé",
+    "image_url": "./elementos_temporarios/praia_do_cacupe.jpg",
+    "category": "PRAIA"
+  },
+  {
+    "id": 36,
+    "check": false,
+    "name": "Praia Do Matadeiro",
+    "image_url": "./elementos_temporarios/praia_do_matadeiro.jpg",
+    "category": "PRAIA"
+  },
+  {
+    "id": 37,
+    "check": false,
+    "name": "Praia Do Saquinho",
+    "image_url": "./elementos_temporarios/praia_do_saquinho.jpeg",
+    "category": "TRILHA"
+  },
+  {
+    "id": 38,
+    "check": false,
+    "name": "Praia Mole",
+    "image_url": "./elementos_temporarios/praia_mole.jpg",
+    "category": "PRAIA"
+  },
+  {
+    "id": 39,
+    "check": false,
+    "name": "Praia Ponta Do Sambaqui",
+    "image_url": "./elementos_temporarios/praia_ponta_do_sambaqui.jpg",
+    "category": "PRAIA"
+  },
+  {
+    "id": 40,
+    "check": false,
+    "name": "Ribeirão Da Ilha",
+    "image_url": "./elementos_temporarios/ribeirao-da-ilha.jpg",
+    "category": "LARICA"
+  },
+  {
+    "id": 41,
+    "check": false,
+    "name": "Santo Antônio Lisboa",
+    "image_url": "./elementos_temporarios/santo-antonio-lisboa.jpg",
+    "category": "LARICA"
+  }
 ]

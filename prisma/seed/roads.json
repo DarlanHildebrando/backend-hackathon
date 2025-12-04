@@ -1,22 +1,27 @@
 [
     {
         "id": 1,
+        "name": "Jornada Manezinha Raiz",
         "check": false,
         "attempt_coins": 0
     },
     {
         "id": 2,
+        "name": "Jornada Gastronômica - Tash Tolo?",
         "check": false,
         "attempt_coins": 0
     },
     {
         "id": 3,
+        "name": "Jornada Hercílio Luz",
         "check": false,
         "attempt_coins": 0
     },
         {
         "id": 4,
+        "name": "Jornada Praiana",
         "check": false,
         "attempt_coins": 0
     }
 ]
+
