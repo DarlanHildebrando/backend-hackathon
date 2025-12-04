@@ -1,20 +1,20 @@
 export interface IRoad {
 
     id: number;
-    days: number;
     attempt_coins: number;
+    check: boolean;
     created_at: Date;
 };
 
 export interface ICreateRoad {
 
-    days: number;
+    check: boolean;
     attempt_coins: number;
 };
 
 export interface IUpdateRoad {
 
-    days?: number;
+    check?: boolean;
     attempt_coins?: number;
     created_at?: Date;
 };

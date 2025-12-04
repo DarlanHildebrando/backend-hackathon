@@ -1,5 +1,5 @@
 import type { ICreateUser, IUpdateUser, IUser } from "./user.module.js";
-import { UserService } from "./user.serivce.js";
+import { UserService } from "./user.service.js";
 import type { Request, Response } from "express";
 import { updateUserSchema, userSchema } from "./user.zod.js";
 import bcrypt from "bcrypt";
@@ -53,7 +53,7 @@ export class UserController {
 
             const user: ICreateUser = req.body;
             const validatedUser = userSchema.parse(user);
-            const hashPassword = await bcrypt.hash(user.password, 10);
+            // const hashPassword = await bcrypt.hash(user.password, 10);
             const existingUser = await this.userService.getUserByEmail(user.email);
 
             if (!validatedUser) {
@@ -66,8 +66,8 @@ export class UserController {
                 return res.status(409).json({ message: "Email already signed" });
             };
 
-            const newUser: ICreateUser = { ...user, password: hashPassword };
-            const data: IUser = await this.userService.createUser(newUser);
+            // const newUser: ICreateUser = { ...user, password: hashPassword };
+            const data: IUser = await this.userService.createUser(user);
             return res.status(201).json(data);
 
         } catch (error: any) {
@@ -84,19 +84,10 @@ export class UserController {
             const user: IUpdateUser = req.body;
             const validatedUser = updateUserSchema.parse(user);
 
-            if (user.email) {
-
-                const existingUser = await this.userService.getUserByEmail(user.email);
-                
-                if (existingUser) {
-
-                    return res.status(409).json({ message: "Email already signed" });
-                };
-            };
-
             if (!id) {
 
                 return res.status(404).json({ message: "Id not received" });
+
             } else if (!validatedUser) {
 
                 return res.status(401).json({ message: "Object structure not valid to update" });

@@ -4,7 +4,9 @@ export interface IAddress {
 
     id: number;
     name: string;
+    image_url: string;
     category: category;
+    check: boolean;
 };
 
 export interface ICreateAddress {
@@ -12,10 +14,13 @@ export interface ICreateAddress {
     name: string;
     image_url: string;
     category: category;
+    check: boolean;
 };
 
 export interface IUpdateAddress {
 
     name?: string;
-    category: category;
+    image_url?: string;
+    category?: category;
+    check?: boolean;
 };
