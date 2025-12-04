@@ -7,36 +7,30 @@ import bcrypt from "bcrypt";
 export class AuthService {
 
     private userService: UserService;
-    
-    constructor(userService: UserService){
-        
+
+    constructor(userService: UserService) {
+
         this.userService = userService;
     };
-    
-    async authenticate(email: string): Promise<ILoggedUser | null>{
-        
+
+    async authenticate(email: string, password: string): Promise<string | null> {
+
         const JWT_SECRET: string = process.env.JWT_SECRET || "";
         const user: ILoggedUser | null = await this.userService.getUserByEmail(email);
-        
-        if(!user){
+
+        if (!user) {
 
             return null;
         };
 
-        // const passwordValidation = await bcrypt.compare(password, user.password);
+        const passwordValidation = await bcrypt.compare(password, user.password);
 
-        // if(!passwordValidation){
+        if (!passwordValidation) {
 
-        //     return null;
-        // };
+            return null;
+        };
 
-        // const payload: IAuth = {
-
-        //     id: user.id,
-        //     email: user.email
-        // };
-
-        // const token = jwt.sign(payload, JWT_SECRET, {expiresIn: '1h'});
-        return user;
-    }; 
+        const token = jwt.sign(user, JWT_SECRET, { expiresIn: '1h' });
+        return token;
+    };
 };

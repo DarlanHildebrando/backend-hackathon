@@ -53,7 +53,7 @@ export class UserController {
 
             const user: ICreateUser = req.body;
             const validatedUser = userSchema.parse(user);
-            // const hashPassword = await bcrypt.hash(user.password, 10);
+            const hashPassword = await bcrypt.hash(user.password, 10);
             const existingUser = await this.userService.getUserByEmail(user.email);
 
             if (!validatedUser) {
@@ -66,8 +66,8 @@ export class UserController {
                 return res.status(409).json({ message: "Email already signed" });
             };
 
-            // const newUser: ICreateUser = { ...user, password: hashPassword };
-            const data: IUser = await this.userService.createUser(user);
+            const newUser: ICreateUser = { ...user, password: hashPassword };
+            const data: IUser = await this.userService.createUser(newUser);
             return res.status(201).json(data);
 
         } catch (error: any) {

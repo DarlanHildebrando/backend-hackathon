@@ -46,7 +46,7 @@ model Address {
   name     String
   image_url String
   category Category
-  check Boolean
+  check Boolean @default(false)
 
   relations Relation[]
 }

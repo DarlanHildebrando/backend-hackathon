@@ -7,7 +7,7 @@ const roadRouter: Router = Router();
 const roadService: RoadService = new RoadService();
 const roadController: RoadController = new RoadController(roadService);
 
-// roadRouter.use(authenticateToken);
+roadRouter.use(authenticateToken);
 roadRouter.get("/", roadController.getRoads.bind(roadController));
 roadRouter.get("/:id", roadController.getRoad.bind(roadController));
 roadRouter.post("/", roadController.postRoad.bind(roadController));

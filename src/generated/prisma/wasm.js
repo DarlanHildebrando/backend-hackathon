@@ -156,7 +156,7 @@ const config = {
       "value": "prisma-client-js"
     },
     "output": {
-      "value": "C:\\Users\\nicholas_carvalho\\Documents\\backend-hackathon\\src\\generated\\prisma",
+      "value": "C:\\Users\\nicho\\Documents\\backend-hackathon\\src\\generated\\prisma",
       "fromEnvVar": null
     },
     "config": {
@@ -170,7 +170,7 @@ const config = {
       }
     ],
     "previewFeatures": [],
-    "sourceFilePath": "C:\\Users\\nicholas_carvalho\\Documents\\backend-hackathon\\prisma\\schema.prisma",
+    "sourceFilePath": "C:\\Users\\nicho\\Documents\\backend-hackathon\\prisma\\schema.prisma",
     "isCustomOutput": true
   },
   "relativeEnvPaths": {
@@ -184,7 +184,6 @@ const config = {
     "db"
   ],
   "activeProvider": "postgresql",
-  "postinstall": false,
   "inlineDatasources": {
     "db": {
       "url": {
@@ -193,8 +192,8 @@ const config = {
       }
     }
   },
-  "inlineSchema": "// This is your Prisma schema file,\n// learn more about it in the docs: https://pris.ly/d/prisma-schema\n\n// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?\n// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init\n\ngenerator client {\n  provider = \"prisma-client-js\"\n  output   = \"../src/generated/prisma\"\n}\n\ndatasource db {\n  provider = \"postgresql\"\n  url      = env(\"DATABASE_URL\")\n}\n\nenum Category {\n  TRILHA\n  PRAIA\n  LARICA\n}\n\nmodel Users {\n  id            Int      @id @default(autoincrement())\n  name          String\n  email         String   @unique\n  password      String\n  current_coins Int      @default(0)\n  created_at    DateTime @default(now())\n\n  relations Relation[]\n}\n\nmodel Road {\n  id            Int      @id @default(autoincrement())\n  attempt_coins Int\n  check         Boolean\n  created_at    DateTime @default(now())\n\n  relations Relation[]\n}\n\nmodel Address {\n  id        Int      @id @default(autoincrement())\n  name      String\n  image_url String\n  category  Category\n  check     Boolean\n\n  relations Relation[]\n}\n\nmodel Relation {\n  id Int @id @default(autoincrement())\n  // Outros campos relevantes para a tabela Relation, se houver\n\n  // -- Relacionamento com User --\n  userId Int\n  user   Users @relation(fields: [userId], references: [id])\n\n  // -- Relacionamento com Address --\n  addressId Int\n  address   Address @relation(fields: [addressId], references: [id])\n\n  // -- Relacionamento com Road --\n  roadId Int\n  road   Road @relation(fields: [roadId], references: [id])\n\n  // Adiciona uma restrição de unicidade composta se cada combinação for única\n  @@unique([userId, addressId, roadId])\n}\n",
-  "inlineSchemaHash": "b8fb21c611a50563ba1f40e6d91f2fd340e8cb139600816e235d52b53f2f3fe3",
+  "inlineSchema": "// This is your Prisma schema file,\n// learn more about it in the docs: https://pris.ly/d/prisma-schema\n\n// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?\n// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init\n\ngenerator client {\n  provider = \"prisma-client-js\"\n  output   = \"../src/generated/prisma\"\n}\n\ndatasource db {\n  provider = \"postgresql\"\n  url      = env(\"DATABASE_URL\")\n}\n\nenum Category {\n  TRILHA\n  PRAIA\n  LARICA\n}\n\nmodel Users {\n  id            Int      @id @default(autoincrement())\n  name          String\n  email         String   @unique\n  password      String\n  current_coins Int      @default(0)\n  created_at    DateTime @default(now())\n\n  relations Relation[]\n}\n\nmodel Road {\n  id            Int      @id @default(autoincrement())\n  attempt_coins Int\n  check         Boolean\n  created_at    DateTime @default(now())\n  // check Boolean @default(false)\n\n  relations Relation[]\n}\n\nmodel Address {\n  id        Int      @id @default(autoincrement())\n  name      String\n  image_url String\n  category  Category\n  check     Boolean  @default(false)\n\n  relations Relation[]\n}\n\nmodel Relation {\n  id Int @id @default(autoincrement())\n  // Outros campos relevantes para a tabela Relation, se houver\n\n  // -- Relacionamento com User --\n  userId Int\n  user   Users @relation(fields: [userId], references: [id])\n\n  // -- Relacionamento com Address --\n  addressId Int\n  address   Address @relation(fields: [addressId], references: [id])\n\n  // -- Relacionamento com Road --\n  roadId Int\n  road   Road @relation(fields: [roadId], references: [id])\n\n  // Adiciona uma restrição de unicidade composta se cada combinação for única\n  @@unique([userId, addressId, roadId])\n}\n",
+  "inlineSchemaHash": "e6c52d2f9b8d27ef92aa43bcfe5d791a04cdeaff429982afafd1e2f7fff98e21",
   "copyEngine": true
 }
 config.dirname = '/'

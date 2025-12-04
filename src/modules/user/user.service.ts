@@ -28,7 +28,9 @@ export class UserService {
             }
         });
     
-        if (!user) return null;
+        if (!user){
+            return null
+        };
     
         const roadsMap = new Map<number, { road: any; addresses: any[] }>();
     

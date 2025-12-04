@@ -6177,7 +6177,7 @@ export namespace Prisma {
     name: string
     image_url: string
     category: $Enums.Category
-    check: boolean
+    check?: boolean
     relations?: RelationCreateNestedManyWithoutAddressInput
   }
 
@@ -6186,7 +6186,7 @@ export namespace Prisma {
     name: string
     image_url: string
     category: $Enums.Category
-    check: boolean
+    check?: boolean
     relations?: RelationUncheckedCreateNestedManyWithoutAddressInput
   }
 
@@ -6212,7 +6212,7 @@ export namespace Prisma {
     name: string
     image_url: string
     category: $Enums.Category
-    check: boolean
+    check?: boolean
   }
 
   export type AddressUpdateManyMutationInput = {
@@ -7018,7 +7018,7 @@ export namespace Prisma {
     name: string
     image_url: string
     category: $Enums.Category
-    check: boolean
+    check?: boolean
   }
 
   export type AddressUncheckedCreateWithoutRelationsInput = {
@@ -7026,7 +7026,7 @@ export namespace Prisma {
     name: string
     image_url: string
     category: $Enums.Category
-    check: boolean
+    check?: boolean
   }
 
   export type AddressCreateOrConnectWithoutRelationsInput = {
