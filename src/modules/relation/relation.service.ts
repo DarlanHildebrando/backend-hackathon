@@ -1,31 +1,30 @@
-import type { IRelation, ICreateRelation, IUpdateRelation } from "./relation.module.js";
 import prisma from "../../prisma/client.js";
-
+import type { IRelation, ICreateRelation, IUpdateRelation } from "./relation.module.js";
 
 export class RelationService {
 
     async getRelations(): Promise<IRelation[]> {
 
-        return prisma.relation.findMany();
+        return await prisma.relation.findMany();
     };
 
     async getRelation(id: number): Promise<IRelation | null> {
 
-        return prisma.relation.findUnique({ where: { id } });
+        return await prisma.relation.findUnique({ where: { id } });
     };
 
-    async createRelation(data: ICreateRelation): Promise<IRelation> {
+    async postRelation(data: ICreateRelation): Promise<IRelation> {
 
-        return prisma.relation.create({ data });
+        return await prisma.relation.create({ data });
     };
 
     async updateRelation(id: number, data: IUpdateRelation): Promise<IRelation> {
 
-        return prisma.relation.update({ where: { id }, data });
+        return await prisma.relation.update({ where: { id }, data: data });
     };
 
     async deleteRelation(id: number): Promise<void> {
 
-        prisma.relation.delete({ where: { id } });
+        await prisma.relation.delete({ where: { id } });
     };
 };
