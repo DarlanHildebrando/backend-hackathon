@@ -9,7 +9,7 @@ const userController: UserController = new UserController(userService);
 
 userRoutes.post("/", userController.postUser.bind(userController));
 
-userRoutes.use(authenticateToken);
+// userRoutes.use(authenticateToken);
 
 userRoutes.get("/:id", userController.getUser.bind(userController));
 userRoutes.get("/", userController.getUsers.bind(userController));
