@@ -9,4 +9,5 @@ function run(cmd) {
 run("npm install");
 run("npx prisma db push");
 run("npx prisma generate");
+run("npx prisma db seed")
 run("npm run dev");
