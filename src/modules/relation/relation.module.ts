@@ -1,21 +1,21 @@
 export interface IRelation {
-    
+
     id: number;
     userId: number;
-    addressId: number;
     roadId: number;
+    addressId: number;
 };
 
 export interface ICreateRelation {
-    
+
     userId: number;
-    addressId: number;
     roadId: number;
+    addressId: number;
 };
 
 export interface IUpdateRelation {
-    
-    userId: number;
-    addressId: number;
-    roadId: number;
+
+    userId?: number;
+    roadId?: number;
+    addressId?: number;
 };

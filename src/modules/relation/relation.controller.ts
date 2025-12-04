@@ -1,9 +1,11 @@
-import type { IRelation, ICreateRelation, IUpdateRelation } from "./relation.module.js";
 import { RelationService } from "./relation.service.js";
 import type { Request, Response } from "express";
+import bcrypt from "bcrypt";
+import type { IRelation, IUpdateRelation } from "./relation.module.js";
 import { relationSchema, updateRelationSchema } from "./relation.zod.js";
 
 export class RelationController {
+
 
     private relationService: RelationService;
 
@@ -33,11 +35,11 @@ export class RelationController {
 
             if (!id) {
 
-                return res.status(404).json({ message: "Id not found" });
+                return res.status(404).json({ message: "Id not received" });
             };
 
-            const road: IRelation | null = await this.relationService.getRelation(Number(id));
-            return res.status(200).json(road);
+            const data: IRelation | null = await this.relationService.getRelation(Number(id));
+            return res.status(200).json(data);
 
         } catch (error: any) {
 
@@ -49,16 +51,16 @@ export class RelationController {
 
         try {
 
-            const data: ICreateRelation = req.body;
-            const validatedRoad = relationSchema.parse(data);
+            const relation: IRelation = req.body;
+            const validatedRelation = relationSchema.parse(relation);
 
-            if (!validatedRoad) {
+            if(!validatedRelation){
 
-                return res.status(401).json({ message: "Object format not valid" });
+                return res.status(401).json({message: "Forbidden"});
             };
 
-            const road: IRelation = await this.relationService.createRelation(data);
-            return res.status(201).json(road);
+            const data = await this.relationService.postRelation(relation);
+            return res.status(201).json(data);
 
         } catch (error: any) {
 
@@ -71,26 +73,24 @@ export class RelationController {
         try {
 
             const { id } = req.params;
-            const data: IUpdateRelation = req.body;
+            const relation: IUpdateRelation = req.body;
+            const validatedRelation = updateRelationSchema.parse(relation);
 
             if (!id) {
 
-                return res.status(404).json({ message: "Id not found" });
+                return res.status(404).json({ message: "Id not received" });
+            
+            } else if (!validatedRelation) {
+
+                return res.status(401).json({ message: "Object structure not valid to update" });
             };
 
-            const validatedRoad = updateRelationSchema.parse(data);
-
-            if (!validatedRoad) {
-
-                return res.status(401).json({ message: "Object format no valid to update" });
-            };
-
-            const road: IRelation = await this.relationService.updateRelation(Number(id), data);
-            return res.status(200).json(road);
+            const data: IRelation = await this.relationService.updateRelation(Number(id), relation);
+            return res.status(200).json(data);
 
         } catch (error: any) {
 
-            return res.status(500).json({ message: error.message });
+            return res.status(500).json({ message: error.message })
         };
     };
 
@@ -102,11 +102,11 @@ export class RelationController {
 
             if (!id) {
 
-                return res.status(404).json({ message: "Id not found" });
+                return res.status(404).json({ message: "Id not received" });
             };
 
             await this.relationService.deleteRelation(Number(id));
-            return res.status(200).json({ message: "Relation deleted with sucess" });
+            return res.status(200).json({ message: "User deleted with sucess" });
 
         } catch (error: any) {
 

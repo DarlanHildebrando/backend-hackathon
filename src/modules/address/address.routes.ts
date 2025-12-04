@@ -7,7 +7,7 @@ const addressRouter: Router = Router();
 const addressService: AddressService = new AddressService();
 const addressController: AddressController = new AddressController(addressService);
 
-addressRouter.use(authenticateToken);
+// addressRouter.use(authenticateToken);
 addressRouter.get("/", addressController.getAllAddres.bind(addressController));
 addressRouter.get("/:id", addressController.getAddress.bind(addressController));
 addressRouter.post("/", addressController.postAddress.bind(addressController));

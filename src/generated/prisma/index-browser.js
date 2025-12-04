@@ -132,8 +132,8 @@ exports.Prisma.UsersScalarFieldEnum = {
 
 exports.Prisma.RoadScalarFieldEnum = {
   id: 'id',
-  days: 'days',
   attempt_coins: 'attempt_coins',
+  check: 'check',
   created_at: 'created_at'
 };
 
@@ -141,7 +141,8 @@ exports.Prisma.AddressScalarFieldEnum = {
   id: 'id',
   name: 'name',
   image_url: 'image_url',
-  category: 'category'
+  category: 'category',
+  check: 'check'
 };
 
 exports.Prisma.RelationScalarFieldEnum = {

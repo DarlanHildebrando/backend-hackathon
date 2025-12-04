@@ -1,7 +1,7 @@
 import { AuthService } from "./auth.service.js";
 import { AuthController } from "./auth.controller.js";
 import { Router } from "express";
-import { UserService } from "../user/user.serivce.js";
+import { UserService } from "../user/user.service.js";
 
 const authRouter: Router = Router();
 const userService: UserService = new UserService();
