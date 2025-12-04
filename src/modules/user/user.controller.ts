@@ -79,6 +79,7 @@ export class UserController {
     };
 
     async putUser(req: Request, res: Response): Promise<Response> {
+
         try {
             const { id } = req.params;
             const data: IUpdateUser = req.body;
@@ -105,8 +106,7 @@ export class UserController {
                 return res.status(404).json({ message: "User not found" });
             };
 
-            const { password, ...sanitizedUser } = updatedUser;
-            const token = this.authService.generateToken(sanitizedUser);
+            const token = this.authService.generateToken(updatedUser);
 
             return res.status(200).json({ token });
 

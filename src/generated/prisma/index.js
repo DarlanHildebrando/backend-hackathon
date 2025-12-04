@@ -157,7 +157,7 @@ const config = {
       "value": "prisma-client-js"
     },
     "output": {
-      "value": "C:\\Users\\nicho\\Documents\\backend-hackathon\\src\\generated\\prisma",
+      "value": "C:\\Users\\nicholas_carvalho\\Documents\\backend-hackathon\\src\\generated\\prisma",
       "fromEnvVar": null
     },
     "config": {
@@ -171,7 +171,7 @@ const config = {
       }
     ],
     "previewFeatures": [],
-    "sourceFilePath": "C:\\Users\\nicho\\Documents\\backend-hackathon\\prisma\\schema.prisma",
+    "sourceFilePath": "C:\\Users\\nicholas_carvalho\\Documents\\backend-hackathon\\prisma\\schema.prisma",
     "isCustomOutput": true
   },
   "relativeEnvPaths": {
