@@ -1,6 +1,6 @@
 import type { Request, Response } from "express";
 import { AuthService } from "./auth.service.js";
-import type { ILoggedUser } from "../user/user.module.js";
+import { UserService } from "../user/user.service.js";
 
 export class AuthController {
 
@@ -16,14 +16,14 @@ export class AuthController {
         try {
 
             const { email, password } = req.body;
-             const token: string | null = await this.authService.authenticate(email, password);
+            const token: string | null = await this.authService.authenticate(email, password);
 
-             if (!token) {
+            if (!token) {
 
-                 return res.status(401).json({ message: "Email or password invalid" });
-             };
+                return res.status(401).json({ message: "Email or password invalid" });
+            };
 
-            return res.status(200).json(token);
+            return res.status(200).json({ token });
 
         } catch (error: any) {
 

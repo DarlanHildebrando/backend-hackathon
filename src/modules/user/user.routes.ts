@@ -2,10 +2,12 @@ import { UserController } from "./user.controller.js";
 import { Router } from "express";
 import { UserService } from "./user.service.js";
 import { authenticateToken } from "../auth/auth.middleware.js";
+import { AuthService } from "../auth/auth.service.js";
 
 const userRoutes: Router = Router();
 const userService: UserService = new UserService();
-const userController: UserController = new UserController(userService);
+const authService: AuthService = new AuthService(userService);
+const userController: UserController = new UserController(userService, authService);
 
 userRoutes.post("/", userController.postUser.bind(userController));
 

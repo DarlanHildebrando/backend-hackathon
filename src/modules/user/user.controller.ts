@@ -3,14 +3,16 @@ import { UserService } from "./user.service.js";
 import type { Request, Response } from "express";
 import { updateUserSchema, userSchema } from "./user.zod.js";
 import bcrypt from "bcrypt";
+import type { AuthService } from "../auth/auth.service.js";
 
 export class UserController {
 
-
     private userService: UserService;
+    private authService: AuthService;
 
-    constructor(userService: UserService) {
+    constructor(userService: UserService, authService: AuthService) {
 
+        this.authService = authService;
         this.userService = userService;
     };
 
@@ -77,28 +79,40 @@ export class UserController {
     };
 
     async putUser(req: Request, res: Response): Promise<Response> {
-
         try {
-
             const { id } = req.params;
-            const user: IUpdateUser = req.body;
-            const validatedUser = updateUserSchema.parse(user);
+            const data: IUpdateUser = req.body;
+
+            updateUserSchema.parse(data);
 
             if (!id) {
-
                 return res.status(404).json({ message: "Id not received" });
+            }
 
-            } else if (!validatedUser) {
+            if (data.password) {
 
-                return res.status(401).json({ message: "Object structure not valid to update" });
+                const hashPassword = await bcrypt.hash(data.password, 10);
+                const safeUpdateUser = { ...data, password: hashPassword }
+                await this.userService.updateUser(Number(id), safeUpdateUser);
+            } else {
+
+                await this.userService.updateUser(Number(id), data);
             };
 
-            const data: IUser = await this.userService.updateUser(Number(id), user);
-            return res.status(200).json(data);
+            const updatedUser = await this.userService.getLoggedUser(Number(id));
+
+            if (!updatedUser) {
+                return res.status(404).json({ message: "User not found" });
+            };
+
+            const { password, ...sanitizedUser } = updatedUser;
+            const token = this.authService.generateToken(sanitizedUser);
+
+            return res.status(200).json({ token });
 
         } catch (error: any) {
 
-            return res.status(500).json({ message: error.message })
+            return res.status(500).json({ message: error.message });
         };
     };
 

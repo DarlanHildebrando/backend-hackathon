@@ -1,7 +1,6 @@
 import jwt from "jsonwebtoken";
-import type { ILoggedUser, IUser } from "../user/user.module.js";
+import type { ILoggedUser, ILoggedUserToken } from "../user/user.module.js";
 import { UserService } from "../user/user.service.js";
-import type { IAuth } from "./auth.modules.js";
 import bcrypt from "bcrypt";
 
 export class AuthService {
@@ -12,6 +11,12 @@ export class AuthService {
 
         this.userService = userService;
     };
+
+    generateToken(user: ILoggedUserToken): string {
+        const JWT_SECRET = process.env.JWT_SECRET || "";
+        return jwt.sign(user, JWT_SECRET, { expiresIn: "1h" });
+    }
+
 
     async authenticate(email: string, password: string): Promise<string | null> {
 
