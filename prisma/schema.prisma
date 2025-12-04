@@ -33,6 +33,7 @@ model Users {
 
 model Road {
   id            Int      @id @default(autoincrement())
+  name          String
   attempt_coins Int
   check Boolean
   created_at    DateTime @default(now())

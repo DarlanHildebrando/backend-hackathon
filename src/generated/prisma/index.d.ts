@@ -2389,6 +2389,7 @@ export namespace Prisma {
 
   export type RoadMinAggregateOutputType = {
     id: number | null
+    name: string | null
     attempt_coins: number | null
     check: boolean | null
     created_at: Date | null
@@ -2396,6 +2397,7 @@ export namespace Prisma {
 
   export type RoadMaxAggregateOutputType = {
     id: number | null
+    name: string | null
     attempt_coins: number | null
     check: boolean | null
     created_at: Date | null
@@ -2403,6 +2405,7 @@ export namespace Prisma {
 
   export type RoadCountAggregateOutputType = {
     id: number
+    name: number
     attempt_coins: number
     check: number
     created_at: number
@@ -2422,6 +2425,7 @@ export namespace Prisma {
 
   export type RoadMinAggregateInputType = {
     id?: true
+    name?: true
     attempt_coins?: true
     check?: true
     created_at?: true
@@ -2429,6 +2433,7 @@ export namespace Prisma {
 
   export type RoadMaxAggregateInputType = {
     id?: true
+    name?: true
     attempt_coins?: true
     check?: true
     created_at?: true
@@ -2436,6 +2441,7 @@ export namespace Prisma {
 
   export type RoadCountAggregateInputType = {
     id?: true
+    name?: true
     attempt_coins?: true
     check?: true
     created_at?: true
@@ -2530,6 +2536,7 @@ export namespace Prisma {
 
   export type RoadGroupByOutputType = {
     id: number
+    name: string
     attempt_coins: number
     check: boolean
     created_at: Date
@@ -2556,6 +2563,7 @@ export namespace Prisma {
 
   export type RoadSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
+    name?: boolean
     attempt_coins?: boolean
     check?: boolean
     created_at?: boolean
@@ -2565,6 +2573,7 @@ export namespace Prisma {
 
   export type RoadSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
+    name?: boolean
     attempt_coins?: boolean
     check?: boolean
     created_at?: boolean
@@ -2572,6 +2581,7 @@ export namespace Prisma {
 
   export type RoadSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
+    name?: boolean
     attempt_coins?: boolean
     check?: boolean
     created_at?: boolean
@@ -2579,12 +2589,13 @@ export namespace Prisma {
 
   export type RoadSelectScalar = {
     id?: boolean
+    name?: boolean
     attempt_coins?: boolean
     check?: boolean
     created_at?: boolean
   }
 
-  export type RoadOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "attempt_coins" | "check" | "created_at", ExtArgs["result"]["road"]>
+  export type RoadOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "name" | "attempt_coins" | "check" | "created_at", ExtArgs["result"]["road"]>
   export type RoadInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     relations?: boolean | Road$relationsArgs<ExtArgs>
     _count?: boolean | RoadCountOutputTypeDefaultArgs<ExtArgs>
@@ -2599,6 +2610,7 @@ export namespace Prisma {
     }
     scalars: $Extensions.GetPayloadResult<{
       id: number
+      name: string
       attempt_coins: number
       check: boolean
       created_at: Date
@@ -3027,6 +3039,7 @@ export namespace Prisma {
    */
   interface RoadFieldRefs {
     readonly id: FieldRef<"Road", 'Int'>
+    readonly name: FieldRef<"Road", 'String'>
     readonly attempt_coins: FieldRef<"Road", 'Int'>
     readonly check: FieldRef<"Road", 'Boolean'>
     readonly created_at: FieldRef<"Road", 'DateTime'>
@@ -5699,6 +5712,7 @@ export namespace Prisma {
 
   export const RoadScalarFieldEnum: {
     id: 'id',
+    name: 'name',
     attempt_coins: 'attempt_coins',
     check: 'check',
     created_at: 'created_at'
@@ -5896,6 +5910,7 @@ export namespace Prisma {
     OR?: RoadWhereInput[]
     NOT?: RoadWhereInput | RoadWhereInput[]
     id?: IntFilter<"Road"> | number
+    name?: StringFilter<"Road"> | string
     attempt_coins?: IntFilter<"Road"> | number
     check?: BoolFilter<"Road"> | boolean
     created_at?: DateTimeFilter<"Road"> | Date | string
@@ -5904,6 +5919,7 @@ export namespace Prisma {
 
   export type RoadOrderByWithRelationInput = {
     id?: SortOrder
+    name?: SortOrder
     attempt_coins?: SortOrder
     check?: SortOrder
     created_at?: SortOrder
@@ -5915,6 +5931,7 @@ export namespace Prisma {
     AND?: RoadWhereInput | RoadWhereInput[]
     OR?: RoadWhereInput[]
     NOT?: RoadWhereInput | RoadWhereInput[]
+    name?: StringFilter<"Road"> | string
     attempt_coins?: IntFilter<"Road"> | number
     check?: BoolFilter<"Road"> | boolean
     created_at?: DateTimeFilter<"Road"> | Date | string
@@ -5923,6 +5940,7 @@ export namespace Prisma {
 
   export type RoadOrderByWithAggregationInput = {
     id?: SortOrder
+    name?: SortOrder
     attempt_coins?: SortOrder
     check?: SortOrder
     created_at?: SortOrder
@@ -5938,6 +5956,7 @@ export namespace Prisma {
     OR?: RoadScalarWhereWithAggregatesInput[]
     NOT?: RoadScalarWhereWithAggregatesInput | RoadScalarWhereWithAggregatesInput[]
     id?: IntWithAggregatesFilter<"Road"> | number
+    name?: StringWithAggregatesFilter<"Road"> | string
     attempt_coins?: IntWithAggregatesFilter<"Road"> | number
     check?: BoolWithAggregatesFilter<"Road"> | boolean
     created_at?: DateTimeWithAggregatesFilter<"Road"> | Date | string
@@ -6124,6 +6143,7 @@ export namespace Prisma {
   }
 
   export type RoadCreateInput = {
+    name: string
     attempt_coins: number
     check: boolean
     created_at?: Date | string
@@ -6132,6 +6152,7 @@ export namespace Prisma {
 
   export type RoadUncheckedCreateInput = {
     id?: number
+    name: string
     attempt_coins: number
     check: boolean
     created_at?: Date | string
@@ -6139,6 +6160,7 @@ export namespace Prisma {
   }
 
   export type RoadUpdateInput = {
+    name?: StringFieldUpdateOperationsInput | string
     attempt_coins?: IntFieldUpdateOperationsInput | number
     check?: BoolFieldUpdateOperationsInput | boolean
     created_at?: DateTimeFieldUpdateOperationsInput | Date | string
@@ -6147,6 +6169,7 @@ export namespace Prisma {
 
   export type RoadUncheckedUpdateInput = {
     id?: IntFieldUpdateOperationsInput | number
+    name?: StringFieldUpdateOperationsInput | string
     attempt_coins?: IntFieldUpdateOperationsInput | number
     check?: BoolFieldUpdateOperationsInput | boolean
     created_at?: DateTimeFieldUpdateOperationsInput | Date | string
@@ -6155,12 +6178,14 @@ export namespace Prisma {
 
   export type RoadCreateManyInput = {
     id?: number
+    name: string
     attempt_coins: number
     check: boolean
     created_at?: Date | string
   }
 
   export type RoadUpdateManyMutationInput = {
+    name?: StringFieldUpdateOperationsInput | string
     attempt_coins?: IntFieldUpdateOperationsInput | number
     check?: BoolFieldUpdateOperationsInput | boolean
     created_at?: DateTimeFieldUpdateOperationsInput | Date | string
@@ -6168,6 +6193,7 @@ export namespace Prisma {
 
   export type RoadUncheckedUpdateManyInput = {
     id?: IntFieldUpdateOperationsInput | number
+    name?: StringFieldUpdateOperationsInput | string
     attempt_coins?: IntFieldUpdateOperationsInput | number
     check?: BoolFieldUpdateOperationsInput | boolean
     created_at?: DateTimeFieldUpdateOperationsInput | Date | string
@@ -6413,6 +6439,7 @@ export namespace Prisma {
 
   export type RoadCountOrderByAggregateInput = {
     id?: SortOrder
+    name?: SortOrder
     attempt_coins?: SortOrder
     check?: SortOrder
     created_at?: SortOrder
@@ -6425,6 +6452,7 @@ export namespace Prisma {
 
   export type RoadMaxOrderByAggregateInput = {
     id?: SortOrder
+    name?: SortOrder
     attempt_coins?: SortOrder
     check?: SortOrder
     created_at?: SortOrder
@@ -6432,6 +6460,7 @@ export namespace Prisma {
 
   export type RoadMinOrderByAggregateInput = {
     id?: SortOrder
+    name?: SortOrder
     attempt_coins?: SortOrder
     check?: SortOrder
     created_at?: SortOrder
@@ -7035,6 +7064,7 @@ export namespace Prisma {
   }
 
   export type RoadCreateWithoutRelationsInput = {
+    name: string
     attempt_coins: number
     check: boolean
     created_at?: Date | string
@@ -7042,6 +7072,7 @@ export namespace Prisma {
 
   export type RoadUncheckedCreateWithoutRelationsInput = {
     id?: number
+    name: string
     attempt_coins: number
     check: boolean
     created_at?: Date | string
@@ -7118,6 +7149,7 @@ export namespace Prisma {
   }
 
   export type RoadUpdateWithoutRelationsInput = {
+    name?: StringFieldUpdateOperationsInput | string
     attempt_coins?: IntFieldUpdateOperationsInput | number
     check?: BoolFieldUpdateOperationsInput | boolean
     created_at?: DateTimeFieldUpdateOperationsInput | Date | string
@@ -7125,6 +7157,7 @@ export namespace Prisma {
 
   export type RoadUncheckedUpdateWithoutRelationsInput = {
     id?: IntFieldUpdateOperationsInput | number
+    name?: StringFieldUpdateOperationsInput | string
     attempt_coins?: IntFieldUpdateOperationsInput | number
     check?: BoolFieldUpdateOperationsInput | boolean
     created_at?: DateTimeFieldUpdateOperationsInput | Date | string
