@@ -15,6 +15,7 @@ export interface ILoggedUser {
     id: number;
     name: string;
     email: string;
+    password: string;
     current_coins: number;
     created_at: Date;
     roads: IRoad[];

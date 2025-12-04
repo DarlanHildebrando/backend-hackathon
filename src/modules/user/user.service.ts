@@ -52,6 +52,7 @@ export class UserService {
             id: user.id,
             name: user.name,
             email: user.email,
+            password: user.password,
             current_coins: user.current_coins,
             created_at: user.created_at,
             roads
@@ -106,6 +107,7 @@ export class UserService {
             id: user.id,
             name: user.name,
             email: user.email,
+            password: user.password,
             current_coins: user.current_coins,
             created_at: user.created_at,
             roads
