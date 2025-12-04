@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "nome": "atedral metropolitana",
+    "descricao": "Descrição de atedral metropolitana",
+    "imagem": "/IMAGENS_TURISMO/atedral-metropolitana.webp"
+  },
+  {
+    "id": 2,
+    "nome": "bairro campeche",
+    "descricao": "Descrição de bairro campeche",
+    "imagem": "/IMAGENS_TURISMO/bairro_campeche.jpeg"
+  },
+  {
+    "id": 3,
+    "nome": "costa da lagoa",
+    "descricao": "Descrição de costa da lagoa",
+    "imagem": "/IMAGENS_TURISMO/costa_da_lagoa.jpg"
+  }
+  {
+    "id": ,
+    "nome": "",
+    "descricao": "",
+    "imagem": ""
+  }
+]
