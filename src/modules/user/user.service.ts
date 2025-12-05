@@ -1,4 +1,4 @@
-import type { ICreateUser, IUpdateUser, IUser } from "./user.module.js";
+import type { ICreateUser, ILoggedUser, IUpdateUser, IUser } from "./user.module.js";
 import prisma from "../../prisma/client.js";
 
 
@@ -9,13 +9,63 @@ export class UserService {
         return prisma.users.findMany();
     };
 
+    async getLoggedUser(id: number): Promise<ILoggedUser | null> {
+
+        const user = await prisma.users.findUnique({
+            where: { id },
+            include: {
+                relations: {
+                    include: {
+                        road: true,
+                        address: true
+                    }
+                }
+            }
+        });
+
+        if (!user) {
+            return null;
+        };
+
+        const roadsMap = new Map<number, { road: any; addresses: any[] }>();
+
+        for (const rel of user.relations) {
+            const roadId = rel.roadId;
+
+            if (!roadsMap.has(roadId)) {
+                roadsMap.set(roadId, { road: rel.road, addresses: [] });
+            }
+
+            roadsMap.get(roadId)!.addresses.push(rel.address);
+        }
+
+        const roads = Array.from(roadsMap.values()).map(r => ({
+            id: r.road.id,
+            name: r.road.name,
+            attempt_coins: r.road.attempt_coins,
+            check: r.road.check,
+            created_at: r.road.created_at,
+            address: r.addresses
+        }));
+
+        return {
+            id: user.id,
+            name: user.name,
+            email: user.email,
+            password: user.password,
+            current_coins: user.current_coins,
+            created_at: user.created_at,
+            roads
+        };
+    };
+
     async getUser(id: number): Promise<IUser | null> {
 
         return prisma.users.findUnique({ where: { id } });
     };
 
     async getUserByEmail(email: string) {
-    
+
         const user = await prisma.users.findFirst({
             where: { email },
             include: {
@@ -27,21 +77,23 @@ export class UserService {
                 }
             }
         });
-    
-        if (!user) return null;
-    
+
+        if (!user) {
+            return null
+        };
+
         const roadsMap = new Map<number, { road: any; addresses: any[] }>();
-    
+
         for (const rel of user.relations) {
             const roadId = rel.roadId;
-    
+
             if (!roadsMap.has(roadId)) {
                 roadsMap.set(roadId, { road: rel.road, addresses: [] });
             }
-    
+
             roadsMap.get(roadId)!.addresses.push(rel.address);
         }
-    
+
         const roads = Array.from(roadsMap.values()).map(r => ({
             id: r.road.id,
             name: r.road.name,
@@ -50,7 +102,7 @@ export class UserService {
             created_at: r.road.created_at,
             address: r.addresses
         }));
-    
+
         return {
             id: user.id,
             name: user.name,
@@ -61,7 +113,7 @@ export class UserService {
             roads
         };
     }
-    
+
 
     async createUser(data: ICreateUser): Promise<IUser> {
 

@@ -132,6 +132,7 @@ exports.Prisma.UsersScalarFieldEnum = {
 
 exports.Prisma.RoadScalarFieldEnum = {
   id: 'id',
+  name: 'name',
   attempt_coins: 'attempt_coins',
   check: 'check',
   created_at: 'created_at'

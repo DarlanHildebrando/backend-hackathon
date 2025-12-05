@@ -3,14 +3,16 @@ import { UserService } from "./user.service.js";
 import type { Request, Response } from "express";
 import { updateUserSchema, userSchema } from "./user.zod.js";
 import bcrypt from "bcrypt";
+import type { AuthService } from "../auth/auth.service.js";
 
 export class UserController {
 
-
     private userService: UserService;
+    private authService: AuthService;
 
-    constructor(userService: UserService) {
+    constructor(userService: UserService, authService: AuthService) {
 
+        this.authService = authService;
         this.userService = userService;
     };
 
@@ -53,7 +55,7 @@ export class UserController {
 
             const user: ICreateUser = req.body;
             const validatedUser = userSchema.parse(user);
-            // const hashPassword = await bcrypt.hash(user.password, 10);
+            const hashPassword = await bcrypt.hash(user.password, 10);
             const existingUser = await this.userService.getUserByEmail(user.email);
 
             if (!validatedUser) {
@@ -66,8 +68,8 @@ export class UserController {
                 return res.status(409).json({ message: "Email already signed" });
             };
 
-            // const newUser: ICreateUser = { ...user, password: hashPassword };
-            const data: IUser = await this.userService.createUser(user);
+            const newUser: ICreateUser = { ...user, password: hashPassword };
+            const data: IUser = await this.userService.createUser(newUser);
             return res.status(201).json(data);
 
         } catch (error: any) {
@@ -79,26 +81,38 @@ export class UserController {
     async putUser(req: Request, res: Response): Promise<Response> {
 
         try {
-
             const { id } = req.params;
-            const user: IUpdateUser = req.body;
-            const validatedUser = updateUserSchema.parse(user);
+            const data: IUpdateUser = req.body;
+
+            updateUserSchema.parse(data);
 
             if (!id) {
-
                 return res.status(404).json({ message: "Id not received" });
+            }
 
-            } else if (!validatedUser) {
+            if (data.password) {
 
-                return res.status(401).json({ message: "Object structure not valid to update" });
+                const hashPassword = await bcrypt.hash(data.password, 10);
+                const safeUpdateUser = { ...data, password: hashPassword }
+                await this.userService.updateUser(Number(id), safeUpdateUser);
+            } else {
+
+                await this.userService.updateUser(Number(id), data);
             };
 
-            const data: IUser = await this.userService.updateUser(Number(id), user);
-            return res.status(200).json(data);
+            const updatedUser = await this.userService.getLoggedUser(Number(id));
+
+            if (!updatedUser) {
+                return res.status(404).json({ message: "User not found" });
+            };
+
+            const token = this.authService.generateToken(updatedUser);
+
+            return res.status(200).json({ token });
 
         } catch (error: any) {
 
-            return res.status(500).json({ message: error.message })
+            return res.status(500).json({ message: error.message });
         };
     };
 

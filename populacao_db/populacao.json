@@ -1,0 +1,248 @@
+[
+  {
+    "id": 1,
+    "nome": "atedral metropolitana",
+    "url": "/IMAGENS_TURISMO/atedral-metropolitana.webp",
+    "descricao": ""
+  },
+  {
+    "id": 2,
+    "nome": "bairro campeche",
+    "url": "/IMAGENS_TURISMO/bairro_campeche.jpeg",
+    "descricao": ""
+  },
+  {
+    "id": 3,
+    "nome": "costa da lagoa",
+    "url": "/IMAGENS_TURISMO/costa_da_lagoa.jpg",
+    "descricao": ""
+  },
+  {
+    "id": 4,
+    "nome": "dunas de joaquina",
+    "url": "/IMAGENS_TURISMO/dunas_de_joaquina.jpeg",
+    "descricao": ""
+  },
+  {
+    "id": 5,
+    "nome": "jurere internacional",
+    "url": "/IMAGENS_TURISMO/jurere_internacional.webp",
+    "descricao": ""
+  },
+  {
+    "id": 6,
+    "nome": "jurere tradicional",
+    "url": "/IMAGENS_TURISMO/jurere_tradicional.jpg",
+    "descricao": ""
+  },
+  {
+    "id": 7,
+    "nome": "lagoa da coinceicao",
+    "url": "/IMAGENS_TURISMO/lagoa_da_coinceicao.jpeg",
+    "descricao": ""
+  },
+  {
+    "id": 8,
+    "nome": "lagoinha do leste",
+    "url": "/IMAGENS_TURISMO/lagoinha_do_leste.jpeg",
+    "descricao": ""
+  },
+  {
+    "id": 9,
+    "nome": "mercado publico",
+    "url": "/IMAGENS_TURISMO/mercado_publico.jpeg",
+    "descricao": ""
+  },
+  {
+    "id": 10,
+    "nome": "mirante da ponte hercilio luz",
+    "url": "/IMAGENS_TURISMO/mirante_da_ponte_hercilio_luz.jpeg",
+    "descricao": ""
+  },
+  {
+    "id": 11,
+    "nome": "mirante do morro das pedras",
+    "url": "/IMAGENS_TURISMO/mirante_do_morro_das_pedras.jpg",
+    "descricao": ""
+  },
+  {
+    "id": 12,
+    "nome": "mirante morro da cruz",
+    "url": "/IMAGENS_TURISMO/mirante_morro_da_cruz.jpeg",
+    "descricao": ""
+  },
+  {
+    "id": 13,
+    "nome": "morro da lagoa",
+    "url": "/IMAGENS_TURISMO/morro_da_lagoa.jpg",
+    "descricao": ""
+  },
+  {
+    "id": 14,
+    "nome": "museu historico",
+    "url": "/IMAGENS_TURISMO/museu_historico.jpeg",
+    "descricao": ""
+  },
+  {
+    "id": 15,
+    "nome": "parque da luz",
+    "url": "/IMAGENS_TURISMO/parque_da_luz.jpeg",
+    "descricao": ""
+  },
+  {
+    "id": 16,
+    "nome": "parque municipal lagoa do peri",
+    "url": "/IMAGENS_TURISMO/parque_municipal_lagoa_do_peri.jpeg",
+    "descricao": ""
+  },
+  {
+    "id": 17,
+    "nome": "piscinas naturais da ilha do campeche",
+    "url": "/IMAGENS_TURISMO/piscinas-naturais-da-ilha-do-campeche.jpg",
+    "descricao": ""
+  },
+  {
+    "id": 18,
+    "nome": "piscinas naturais barra lagoa",
+    "url": "/IMAGENS_TURISMO/piscinas_naturais_barra_lagoa.jpg",
+    "descricao": ""
+  },
+  {
+    "id": 19,
+    "nome": "ponta de canas",
+    "url": "/IMAGENS_TURISMO/ponta_de_canas.jpeg",
+    "descricao": ""
+  },
+  {
+    "id": 20,
+    "nome": "ponte hercilio luz",
+    "url": "/IMAGENS_TURISMO/ponte_hercilio_luz.jpeg",
+    "descricao": ""
+  },
+  {
+    "id": 21,
+    "nome": "praca xv de novembro",
+    "url": "/IMAGENS_TURISMO/praca-xv-de-novembro.jpg",
+    "descricao": ""
+  },
+  {
+    "id": 22,
+    "nome": "praia campeche",
+    "url": "/IMAGENS_TURISMO/praia-campeche.jpg",
+    "descricao": ""
+  },
+  {
+    "id": 23,
+    "nome": "praia da armacao",
+    "url": "/IMAGENS_TURISMO/praia-da-armacao.jpg",
+    "descricao": ""
+  },
+  {
+    "id": 24,
+    "nome": "praia da joaquina florianopolis",
+    "url": "/IMAGENS_TURISMO/praia-da-joaquina-florianopolis.jpg.webp",
+    "descricao": ""
+  },
+  {
+    "id": 25,
+    "nome": "praia da tapera",
+    "url": "/IMAGENS_TURISMO/praia-da-tapera.jpg",
+    "descricao": ""
+  },
+  {
+    "id": 26,
+    "nome": "praia daniela",
+    "url": "/IMAGENS_TURISMO/praia-daniela.jpg",
+    "descricao": ""
+  },
+  {
+    "id": 27,
+    "nome": "praia do forte",
+    "url": "/IMAGENS_TURISMO/praia-do-forte.jpg",
+    "descricao": ""
+  },
+  {
+    "id": 28,
+    "nome": "praia do mocambique",
+    "url": "/IMAGENS_TURISMO/praia-do-mocambique.webp",
+    "descricao": ""
+  },
+  {
+    "id": 29,
+    "nome": "Praia do Ribeiro",
+    "url": "/IMAGENS_TURISMO/Praia-do-Ribeiro.jpg",
+    "descricao": ""
+  },
+  {
+    "id": 30,
+    "nome": "praia do santinho",
+    "url": "/IMAGENS_TURISMO/praia-do-santinho.jpg",
+    "descricao": ""
+  },
+  {
+    "id": 31,
+    "nome": "praia dos ingleses em florianopolis",
+    "url": "/IMAGENS_TURISMO/praia-dos-ingleses-em-florianopolis.webp",
+    "descricao": ""
+  },
+  {
+    "id": 32,
+    "nome": "praia dos naufragados",
+    "url": "/IMAGENS_TURISMO/praia-dos-naufragados.jpg",
+    "descricao": ""
+  },
+  {
+    "id": 33,
+    "nome": "praia da galheta",
+    "url": "/IMAGENS_TURISMO/praia_da_galheta.jpeg",
+    "descricao": ""
+  },
+  {
+    "id": 34,
+    "nome": "praia da solidao",
+    "url": "/IMAGENS_TURISMO/praia_da_solidao.jpg",
+    "descricao": ""
+  },
+  {
+    "id": 35,
+    "nome": "praia do cacupe",
+    "url": "/IMAGENS_TURISMO/praia_do_cacupe.jpg",
+    "descricao": ""
+  },
+  {
+    "id": 36,
+    "nome": "praia do matadeiro",
+    "url": "/IMAGENS_TURISMO/praia_do_matadeiro.jpg",
+    "descricao": ""
+  },
+  {
+    "id": 37,
+    "nome": "praia do saquinho",
+    "url": "/IMAGENS_TURISMO/praia_do_saquinho.jpeg",
+    "descricao": ""
+  },
+  {
+    "id": 38,
+    "nome": "praia mole",
+    "url": "/IMAGENS_TURISMO/praia_mole.jpg",
+    "descricao": ""
+  },
+  {
+    "id": 39,
+    "nome": "praia ponta do sambaqui",
+    "url": "/IMAGENS_TURISMO/praia_ponta_do_sambaqui.jpg",
+    "descricao": ""
+  },
+  {
+    "id": 40,
+    "nome": "ribeirao da ilha",
+    "url": "/IMAGENS_TURISMO/ribeirao-da-ilha.jpg",
+    "descricao": ""
+  },
+  {
+    "id": 41,
+    "nome": "santo antonio lisboa",
+    "url": "/IMAGENS_TURISMO/santo-antonio-lisboa.jpg",
+    "descricao": ""
+  }
+]

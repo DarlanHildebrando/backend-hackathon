@@ -33,6 +33,7 @@ model Users {
 
 model Road {
   id            Int      @id @default(autoincrement())
+  name          String
   attempt_coins Int
   check Boolean
   created_at    DateTime @default(now())
@@ -46,7 +47,7 @@ model Address {
   name     String
   image_url String
   category Category
-  check Boolean
+  check Boolean @default(false)
 
   relations Relation[]
 }

@@ -5,6 +5,8 @@ export interface IUser {
     id: number;
     name: string;
     email: string;
+    current_coins: number;
+    created_at: Date;
     password: string;
 };
 
@@ -14,8 +16,12 @@ export interface ILoggedUser {
     name: string;
     email: string;
     password: string;
+    current_coins: number;
+    created_at: Date;
     roads: IRoad[];
 };
+
+export type ILoggedUserToken = Omit<ILoggedUser, "password">;
 
 export interface ICreateUser {
 
